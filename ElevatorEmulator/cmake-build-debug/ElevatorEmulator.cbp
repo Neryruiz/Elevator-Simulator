@@ -104,6 +104,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/People.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/RandomGenerator.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/RandomGenerator.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Security.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
@@ -122,10 +128,22 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Staff.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SupportStaff.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SupportStaff.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SystemController.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SystemController.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Visitors.cpp">

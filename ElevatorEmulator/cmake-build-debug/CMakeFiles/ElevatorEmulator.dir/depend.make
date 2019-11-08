@@ -18,6 +18,9 @@ CMakeFiles/ElevatorEmulator.dir/People.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/People.cpp.o: ../People.cpp
 CMakeFiles/ElevatorEmulator.dir/People.cpp.o: ../People.h
 
+CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.o: ../RandomGenerator.cpp
+CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.o: ../RandomGenerator.h
+
 CMakeFiles/ElevatorEmulator.dir/Security.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/Security.cpp.o: ../Security.cpp
 CMakeFiles/ElevatorEmulator.dir/Security.cpp.o: ../Security.h
@@ -31,10 +34,16 @@ CMakeFiles/ElevatorEmulator.dir/Staff.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/Staff.cpp.o: ../Staff.cpp
 CMakeFiles/ElevatorEmulator.dir/Staff.cpp.o: ../Staff.h
 
+CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o: ../StatisticsKeeper.cpp
+CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o: ../StatisticsKeeper.h
+
 CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../Staff.h
 CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../SupportStaff.cpp
 CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../SupportStaff.h
+
+CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.cpp
+CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.h
 
 CMakeFiles/ElevatorEmulator.dir/Visitors.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/Visitors.cpp.o: ../People.h
@@ -45,10 +54,13 @@ CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../MedicalStaff.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Patients.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../People.h
+CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../RandomGenerator.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Security.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../SecurityPersonnel.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Staff.h
+CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../StatisticsKeeper.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../SupportStaff.h
+CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../SystemController.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Visitors.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../main.cpp
 

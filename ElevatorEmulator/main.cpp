@@ -17,6 +17,8 @@
 #include <map>
 #include <set>
 #include <iterator>
+#include <random>
+#include <ctime>
 
 
 using namespace std;
@@ -28,7 +30,9 @@ using namespace std;
 #include "SupportStaff.h"
 #include "SecurityPersonnel.h"
 #include "MedicalStaff.h"
-
+#include "SystemController.h"
+#include "RandomGenerator.h"
+#include "StatisticsKeeper.h"
 
 using namespace std;
 
@@ -36,34 +40,49 @@ int main() {
     std::cout << " Main File " << endl;
 
     std::string path = "/Users/soumilshah/CLionProjects/ElevatorEmulator/input.txt";
-    std::string line;
-    string result {};
-    int counter = 1;
 
-    std::ifstream in_file (path);
-    std::stringstream ss(line);
+    SystemController *controller;
+    controller = new SystemController();
+    controller->readFile(path);
 
-    // Data Structure
-    map<int, vector<std::string>> Data;
+//    time_t dt = StatisticsKeeper::getMonth();
+//    cout << dt << endl;
 
-    // Stores the Data in Data Structure
-    while (std::getline(in_file, line))
-    {
-        std::stringstream ss(line);
 
-        while  (ss >> result)
-        {
-            Data[counter].push_back(result);
-        }
-        counter = counter + 1;
-    }
 
-    cout << Data[3].size() << endl;
-    cout << "============" << endl;
-    for(auto x: Data[3])
-    {
-        cout << x << endl;
-    }
+    // int num = RandomGenerator::generateRandomNumber(0,20);
+
+
+//    std::string path = "/Users/soumilshah/CLionProjects/ElevatorEmulator/input.txt";
+//    std::string line;
+//    string result {};
+//    int counter = 1;
+//
+//    std::ifstream in_file (path);
+//    std::stringstream ss(line);
+//
+//    // Data Structure
+//    map<int, vector<std::string>> Data;
+//
+//    // Stores the Data in Data Structure
+//    while (std::getline(in_file, line))
+//    {
+//        std::stringstream ss(line);
+//
+//        while  (ss >> result)
+//        {
+//            Data[counter].push_back(result);
+//        }
+//        counter = counter + 1;
+//    }
+
+//    cout << Data[3].size() << endl;
+//    cout << "============" << endl;
+//    for(auto x: Data[3])
+//    {
+//        cout << x << endl;
+//    }
+
 
 //
 //    Passenger *Passenger[16];

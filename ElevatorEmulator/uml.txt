@@ -2,10 +2,16 @@
 
 title Classes - Elevator Simulator
 
+abstract class Staff
+abstract class Security
+
 
 Passenger <|-- People
-Passenger <|-- Staff
-Passenger <|-- Security
+Passenger <|-- Staff: Abstract Class
+note on link #red: Abstract Class
+
+Passenger <|-- Security  :Abstract Class
+note on link #red: Abstract Class
 
 
 People <|-- Visitors
@@ -21,7 +27,7 @@ virtual void evacuate();
 }
 
 class Staff{
-virtual void emergency();
+virtual void emergency ()=0;
 }
 
 class Passenger{
@@ -35,7 +41,7 @@ class Passenger{
 }
 
 class Visitors{
-    static int count;
+    {static} int count;
 
     Visitors();
     virtual ~Visitors();
@@ -43,7 +49,7 @@ class Visitors{
 }
 
 class Patient{
-    static int count;
+    {static} int count;
 
     Patient();
     virtual ~Patient();
@@ -53,7 +59,7 @@ class Patient{
 
 class SupportStaff{
 
-    static int count;
+    {static} int count;
     SupportStaff();
     virtual ~SupportStaff();
     virtual void introduce () override ;
@@ -61,7 +67,7 @@ class SupportStaff{
 }
 class MedicalStaff{
 
-    static int count;
+    {static} int count;
     MedicalStaff();
     virtual ~MedicalStaff();
     virtual void introduce () override ;
@@ -69,13 +75,29 @@ class MedicalStaff{
 }
 
 class SecurityPersonal{
-    static int count;
+    {static} int count;
     SecurityPersonal();
     virtual ~SecurityPersonal();
     virtual void introduce () override ;
     virtual void evacuate() override ;
 }
 
+class SystemController{
++  string line;
++ string result;
++ int counter;
++ map<int, vector<std::string>> Data;
+
++ SystemController();
++ ~SystemController();
++ void readFile(std::string path);
+}
+
+class randomGenerator{
+
+{static}int generateRandomNumber(int low, int high);
+
+}
 
 
 

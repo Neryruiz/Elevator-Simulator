@@ -231,6 +231,33 @@ People.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/People.cpp.s
 .PHONY : People.cpp.s
 
+RandomGenerator.o: RandomGenerator.cpp.o
+
+.PHONY : RandomGenerator.o
+
+# target to build an object file
+RandomGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.o
+.PHONY : RandomGenerator.cpp.o
+
+RandomGenerator.i: RandomGenerator.cpp.i
+
+.PHONY : RandomGenerator.i
+
+# target to preprocess a source file
+RandomGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.i
+.PHONY : RandomGenerator.cpp.i
+
+RandomGenerator.s: RandomGenerator.cpp.s
+
+.PHONY : RandomGenerator.s
+
+# target to generate assembly for a file
+RandomGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.s
+.PHONY : RandomGenerator.cpp.s
+
 Security.o: Security.cpp.o
 
 .PHONY : Security.o
@@ -312,6 +339,33 @@ Staff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Staff.cpp.s
 .PHONY : Staff.cpp.s
 
+StatisticsKeeper.o: StatisticsKeeper.cpp.o
+
+.PHONY : StatisticsKeeper.o
+
+# target to build an object file
+StatisticsKeeper.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o
+.PHONY : StatisticsKeeper.cpp.o
+
+StatisticsKeeper.i: StatisticsKeeper.cpp.i
+
+.PHONY : StatisticsKeeper.i
+
+# target to preprocess a source file
+StatisticsKeeper.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.i
+.PHONY : StatisticsKeeper.cpp.i
+
+StatisticsKeeper.s: StatisticsKeeper.cpp.s
+
+.PHONY : StatisticsKeeper.s
+
+# target to generate assembly for a file
+StatisticsKeeper.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.s
+.PHONY : StatisticsKeeper.cpp.s
+
 SupportStaff.o: SupportStaff.cpp.o
 
 .PHONY : SupportStaff.o
@@ -338,6 +392,33 @@ SupportStaff.s: SupportStaff.cpp.s
 SupportStaff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.s
 .PHONY : SupportStaff.cpp.s
+
+SystemController.o: SystemController.cpp.o
+
+.PHONY : SystemController.o
+
+# target to build an object file
+SystemController.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o
+.PHONY : SystemController.cpp.o
+
+SystemController.i: SystemController.cpp.i
+
+.PHONY : SystemController.i
+
+# target to preprocess a source file
+SystemController.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.i
+.PHONY : SystemController.cpp.i
+
+SystemController.s: SystemController.cpp.s
+
+.PHONY : SystemController.s
+
+# target to generate assembly for a file
+SystemController.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.s
+.PHONY : SystemController.cpp.s
 
 Visitors.o: Visitors.cpp.o
 
@@ -414,6 +495,9 @@ help:
 	@echo "... People.o"
 	@echo "... People.i"
 	@echo "... People.s"
+	@echo "... RandomGenerator.o"
+	@echo "... RandomGenerator.i"
+	@echo "... RandomGenerator.s"
 	@echo "... Security.o"
 	@echo "... Security.i"
 	@echo "... Security.s"
@@ -423,9 +507,15 @@ help:
 	@echo "... Staff.o"
 	@echo "... Staff.i"
 	@echo "... Staff.s"
+	@echo "... StatisticsKeeper.o"
+	@echo "... StatisticsKeeper.i"
+	@echo "... StatisticsKeeper.s"
 	@echo "... SupportStaff.o"
 	@echo "... SupportStaff.i"
 	@echo "... SupportStaff.s"
+	@echo "... SystemController.o"
+	@echo "... SystemController.i"
+	@echo "... SystemController.s"
 	@echo "... Visitors.o"
 	@echo "... Visitors.i"
 	@echo "... Visitors.s"
