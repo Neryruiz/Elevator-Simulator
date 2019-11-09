@@ -8,4 +8,6 @@ add_executable(ElevatorEmulator main.cpp
         Visitors.h Patients.cpp Patients.h
         SupportStaff.cpp SupportStaff.h MedicalStaff.cpp
         MedicalStaff.h SecurityPersonnel.cpp SecurityPersonnel.h
-        Staff.cpp Staff.h Security.cpp Security.h People.cpp People.h SystemController.cpp SystemController.h RandomGenerator.cpp RandomGenerator.h StatisticsKeeper.cpp StatisticsKeeper.h)
+        Staff.cpp Staff.h Security.cpp Security.h People.cpp People.h
+        SystemController.cpp SystemController.h RandomGenerator.cpp
+        RandomGenerator.h DateTime.cpp DateTime.h Bulding.cpp Bulding.h Elevators.cpp Elevators.h)

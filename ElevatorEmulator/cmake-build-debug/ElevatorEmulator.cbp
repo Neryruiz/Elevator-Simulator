@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Bulding.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Bulding.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/MedicalStaff.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
@@ -126,12 +144,6 @@
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Staff.h">
-			<Option target="ElevatorEmulator"/>
-		</Unit>
-		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp">
-			<Option target="ElevatorEmulator"/>
-		</Unit>
-		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SupportStaff.cpp">

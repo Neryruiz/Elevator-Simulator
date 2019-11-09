@@ -213,18 +213,44 @@ CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soumilshah/CLionProjects/ElevatorEmulator/RandomGenerator.cpp -o CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.s
 
-CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o: CMakeFiles/ElevatorEmulator.dir/flags.make
-CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o: ../StatisticsKeeper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o -c /Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp
+CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o: CMakeFiles/ElevatorEmulator.dir/flags.make
+CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o: ../DateTime.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o -c /Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.cpp
 
-CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp > CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.i
+CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.cpp > CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.i
 
-CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp -o CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.s
+CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.cpp -o CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.s
+
+CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o: CMakeFiles/ElevatorEmulator.dir/flags.make
+CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o: ../Bulding.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o -c /Users/soumilshah/CLionProjects/ElevatorEmulator/Bulding.cpp
+
+CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/soumilshah/CLionProjects/ElevatorEmulator/Bulding.cpp > CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.i
+
+CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soumilshah/CLionProjects/ElevatorEmulator/Bulding.cpp -o CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.s
+
+CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o: CMakeFiles/ElevatorEmulator.dir/flags.make
+CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o: ../Elevators.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o -c /Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.cpp
+
+CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.cpp > CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.i
+
+CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.cpp -o CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.s
 
 # Object files for target ElevatorEmulator
 ElevatorEmulator_OBJECTS = \
@@ -240,7 +266,9 @@ ElevatorEmulator_OBJECTS = \
 "CMakeFiles/ElevatorEmulator.dir/People.cpp.o" \
 "CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o" \
 "CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.o" \
-"CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o"
+"CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o" \
+"CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o" \
+"CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o"
 
 # External object files for target ElevatorEmulator
 ElevatorEmulator_EXTERNAL_OBJECTS =
@@ -257,10 +285,12 @@ ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/Security.cpp.o
 ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/People.cpp.o
 ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o
 ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/RandomGenerator.cpp.o
-ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o
+ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o
+ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o
+ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o
 ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/build.make
 ElevatorEmulator: CMakeFiles/ElevatorEmulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ElevatorEmulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/soumilshah/CLionProjects/ElevatorEmulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable ElevatorEmulator"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ElevatorEmulator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

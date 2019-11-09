@@ -123,6 +123,87 @@ ElevatorEmulator/fast:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/build
 .PHONY : ElevatorEmulator/fast
 
+Bulding.o: Bulding.cpp.o
+
+.PHONY : Bulding.o
+
+# target to build an object file
+Bulding.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o
+.PHONY : Bulding.cpp.o
+
+Bulding.i: Bulding.cpp.i
+
+.PHONY : Bulding.i
+
+# target to preprocess a source file
+Bulding.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.i
+.PHONY : Bulding.cpp.i
+
+Bulding.s: Bulding.cpp.s
+
+.PHONY : Bulding.s
+
+# target to generate assembly for a file
+Bulding.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.s
+.PHONY : Bulding.cpp.s
+
+DateTime.o: DateTime.cpp.o
+
+.PHONY : DateTime.o
+
+# target to build an object file
+DateTime.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o
+.PHONY : DateTime.cpp.o
+
+DateTime.i: DateTime.cpp.i
+
+.PHONY : DateTime.i
+
+# target to preprocess a source file
+DateTime.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.i
+.PHONY : DateTime.cpp.i
+
+DateTime.s: DateTime.cpp.s
+
+.PHONY : DateTime.s
+
+# target to generate assembly for a file
+DateTime.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.s
+.PHONY : DateTime.cpp.s
+
+Elevators.o: Elevators.cpp.o
+
+.PHONY : Elevators.o
+
+# target to build an object file
+Elevators.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o
+.PHONY : Elevators.cpp.o
+
+Elevators.i: Elevators.cpp.i
+
+.PHONY : Elevators.i
+
+# target to preprocess a source file
+Elevators.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.i
+.PHONY : Elevators.cpp.i
+
+Elevators.s: Elevators.cpp.s
+
+.PHONY : Elevators.s
+
+# target to generate assembly for a file
+Elevators.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.s
+.PHONY : Elevators.cpp.s
+
 MedicalStaff.o: MedicalStaff.cpp.o
 
 .PHONY : MedicalStaff.o
@@ -339,33 +420,6 @@ Staff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Staff.cpp.s
 .PHONY : Staff.cpp.s
 
-StatisticsKeeper.o: StatisticsKeeper.cpp.o
-
-.PHONY : StatisticsKeeper.o
-
-# target to build an object file
-StatisticsKeeper.cpp.o:
-	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.o
-.PHONY : StatisticsKeeper.cpp.o
-
-StatisticsKeeper.i: StatisticsKeeper.cpp.i
-
-.PHONY : StatisticsKeeper.i
-
-# target to preprocess a source file
-StatisticsKeeper.cpp.i:
-	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.i
-.PHONY : StatisticsKeeper.cpp.i
-
-StatisticsKeeper.s: StatisticsKeeper.cpp.s
-
-.PHONY : StatisticsKeeper.s
-
-# target to generate assembly for a file
-StatisticsKeeper.cpp.s:
-	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StatisticsKeeper.cpp.s
-.PHONY : StatisticsKeeper.cpp.s
-
 SupportStaff.o: SupportStaff.cpp.o
 
 .PHONY : SupportStaff.o
@@ -483,6 +537,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ElevatorEmulator"
+	@echo "... Bulding.o"
+	@echo "... Bulding.i"
+	@echo "... Bulding.s"
+	@echo "... DateTime.o"
+	@echo "... DateTime.i"
+	@echo "... DateTime.s"
+	@echo "... Elevators.o"
+	@echo "... Elevators.i"
+	@echo "... Elevators.s"
 	@echo "... MedicalStaff.o"
 	@echo "... MedicalStaff.i"
 	@echo "... MedicalStaff.s"
@@ -507,9 +570,6 @@ help:
 	@echo "... Staff.o"
 	@echo "... Staff.i"
 	@echo "... Staff.s"
-	@echo "... StatisticsKeeper.o"
-	@echo "... StatisticsKeeper.i"
-	@echo "... StatisticsKeeper.s"
 	@echo "... SupportStaff.o"
 	@echo "... SupportStaff.i"
 	@echo "... SupportStaff.s"

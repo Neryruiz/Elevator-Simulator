@@ -28,7 +28,6 @@ SystemController::~SystemController()
 void SystemController::readFile(std::string path)
 {
 
-
     std::ifstream in_file (path);
     std::stringstream ss(line);
 
@@ -36,12 +35,19 @@ void SystemController::readFile(std::string path)
     // Stores the Data in Data Structure
     while (std::getline(in_file, line))
     {
+        // cout << "="<<line<<"="<< endl;
         std::stringstream ss(line);
+        // cout << "length" << line.size()<< endl;
 
-        while  (ss >> result)
-        {
-            Data[counter].push_back(result);
-        }
+            while  (ss >> result)
+            {
+
+                // cout << "*"<<result<<"*"<< endl;
+                Data[counter].push_back(result);
+            }
+
+
+        // cout << "\n";
         counter = counter + 1;
     }
 }

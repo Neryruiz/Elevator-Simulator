@@ -99,6 +99,27 @@ class randomGenerator{
 
 }
 
+class DateTime{
+    {static} time_t getMonth();
+    {static} time_t getDay();
+    {static} time_t getYear();
+    {static} time_t getDateTime();
+}
+
+class Bulding{
++ int floor;
+Bulding();
+Bulding(int floor)
+~Bulding();
+
+}
+
+class Elevators{
++ int maxCapacity;
+Bulding(int floor)
+
+}
+
 
 
 @enduml

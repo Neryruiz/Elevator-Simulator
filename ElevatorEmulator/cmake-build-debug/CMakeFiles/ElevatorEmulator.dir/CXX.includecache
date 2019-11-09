@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.h
+iostream
+-
+ctime
+-
+
+/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.h
+iostream
+-
+ctime
+-
+
 /Users/soumilshah/CLionProjects/ElevatorEmulator/MedicalStaff.h
 istream
 -
@@ -51,16 +63,6 @@ iostream
 -
 Passenger.h
 /Users/soumilshah/CLionProjects/ElevatorEmulator/Passenger.h
-
-/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.cpp
-ctime
--
-iostream
--
-StatisticsKeeper.h
-/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.h
-
-/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.h
 
 /Users/soumilshah/CLionProjects/ElevatorEmulator/SupportStaff.h
 Passenger.h
@@ -135,6 +137,8 @@ SystemController.h
 /Users/soumilshah/CLionProjects/ElevatorEmulator/SystemController.h
 RandomGenerator.h
 /Users/soumilshah/CLionProjects/ElevatorEmulator/RandomGenerator.h
-StatisticsKeeper.h
-/Users/soumilshah/CLionProjects/ElevatorEmulator/StatisticsKeeper.h
+DateTime.h
+/Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.h
+Elevators.h
+/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.h
 
