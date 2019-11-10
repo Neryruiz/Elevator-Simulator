@@ -15,7 +15,7 @@ int Patients::count = 0;
 
 Patients::Patients()
 {
-    cout << " Patients class  Constructor ---->" << endl;
+    // cout << " Patients class  Constructor ---->" << endl;
     string uniqueId =  "P";
     count ++;
     string unique = uniqueId + std::to_string(count);
@@ -24,12 +24,15 @@ Patients::Patients()
 
 Patients::~Patients()
 {
-    cout  << "Patient class Destructor --------> " <<  endl;
+    // cout  << "Patient class Destructor --------> " <<  endl;
     count --;
 }
 
 
 void Patients::introduce()
 {
-    cout << "Hi! i am Patients ID: " << PassengerId << endl;
+    cout << "-------------------------------------------"<< endl;
+    cout << "Hi ! I am Patients:\t"<<PassengerId << endl;
+    cout << "Current Floor:\t"<<CurrentFloor<< endl;
+    cout << "Destination Floor:\t" << DestinationFloor << endl;
 }

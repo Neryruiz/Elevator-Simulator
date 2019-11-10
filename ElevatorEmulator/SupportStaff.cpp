@@ -14,7 +14,7 @@ int SupportStaff::count = 0;
 
 SupportStaff::SupportStaff()
 {
-    cout << "Support Staff Constructor " << endl;
+    // cout << "Support Staff Constructor " << endl;
 
     string uniqueId =  "SS";
     count++;
@@ -24,14 +24,17 @@ SupportStaff::SupportStaff()
 
 SupportStaff::~SupportStaff()
 {
-    cout << "Support staff Destructor " << endl;
+    //cout << "Support staff Destructor " << endl;
     count --;
 }
 
 
 void SupportStaff::introduce()
 {
-    cout << "Hi! i am SupportStaff ID "<< PassengerId << endl;
+    cout << "-------------------------------------------"<< endl;
+    cout << "Hi ! I am SupportStaff:\t"<<PassengerId << endl;
+    cout << "Current Floor:\t"<<CurrentFloor<< endl;
+    cout << "Destination Floor:\t" << DestinationFloor << endl;
 }
 
 

@@ -29,7 +29,10 @@ SecurityPersonnel::~SecurityPersonnel()
 
 void SecurityPersonnel::introduce()
 {
-    cout << "Hi! i am SecurityPersonnel ID : " << PassengerId << endl;
+    cout << "-------------------------------------------"<< endl;
+    cout << "Hi ! I am SecurityPersonnel:\t"<<PassengerId << endl;
+    cout << "Current Floor:\t"<<CurrentFloor<< endl;
+    cout << "Destination Floor:\t" << DestinationFloor << endl;
 }
 
 void SecurityPersonnel::evacuate()

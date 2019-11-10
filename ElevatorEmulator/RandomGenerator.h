@@ -9,7 +9,7 @@
 class RandomGenerator {
 
 public:
-    static int generateRandomNumber(int low, int high);
+    static int generateRandomNumber(int low,int high);
 
 public:
     RandomGenerator();

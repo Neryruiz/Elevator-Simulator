@@ -19,28 +19,6 @@ using namespace std;
 
 class SystemController {
 
-public:
-    /*
-     * Attributes
-     */
-    std::string line;
-    string result {};
-    int counter = 1;
-    map<int, vector<std::string>> Data;
-
-
-public:
-    /*
-     * Constructor and Destructor
-     */
-    SystemController();
-    ~SystemController();
-
-public:
-    /*
-     * Methods
-     */
-    void readFile(std::string path);
 };
 
 

@@ -82,7 +82,7 @@ class SecurityPersonal{
     virtual void evacuate() override ;
 }
 
-class SystemController{
+class FileRead{
 +  string line;
 + string result;
 + int counter;
@@ -120,6 +120,35 @@ Bulding(int floor)
 
 }
 
+class SystemController{
+}
+class TrafficGenerator{
+
+    map<int, vector<std::string>> Data;
+    string floor;
+    string totalNumberElevator;
+    string capacity;
+
+    vector<string> visitor;
+    vector<string> patient;
+    vector<string> supportstaff;
+    vector<string> medicalstaff;
+    vector<string> securitystaff;
+
+
+}
+
+FileRead *-- TrafficGenerator : Composition
+
+class StringHelper{
+ {static} int string_to_int(string);
+ {static} float string_to_float(std::string num);
+}
+
+class Probablity{
+     {static} int roundoff(string probablity, string num);
+
+}
 
 
 @enduml

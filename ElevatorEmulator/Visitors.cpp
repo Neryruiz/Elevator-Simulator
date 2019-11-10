@@ -18,7 +18,7 @@ int Visitors ::count = 0;
 
 Visitors::Visitors()
 {
-    cout << "Visitors Constructor  ------->" << endl;
+    //cout << "Visitors Constructor  ------->" << endl;
 
     count ++;
     string uniqueId =  "V";
@@ -30,12 +30,17 @@ Visitors::Visitors()
 
 Visitors::~Visitors()
 {
-    cout << "Visitors Destructor  ------" << endl;
+    // cout << "Visitors Destructor  ------" << endl;
     count --;
 }
 
 
 void Visitors::introduce()
 {
-    cout << "Hi! i am Visitors : ID " << PassengerId << endl;
+    cout << "-------------------------------------------"<< endl;
+    cout << "Hi ! I am Visitor:\t"<<PassengerId << endl;
+    cout << "Current Floor:\t"<<CurrentFloor<< endl;
+    cout << "Destination Floor:\t"<<DestinationFloor<< endl;
+
+
 }

@@ -12,7 +12,7 @@ int MedicalStaff::count=0;
 
 MedicalStaff::MedicalStaff()
 {
-    cout << " MedicaStaff Constructor ---->" << endl;
+    //cout << " MedicaStaff Constructor ---->" << endl;
     string uniqueId =  "MS";
     count++;
     string unique = uniqueId + std::to_string(count);
@@ -22,13 +22,16 @@ MedicalStaff::MedicalStaff()
 
 MedicalStaff::~MedicalStaff()
 {
-    cout << "MedicalStaff Destructor  --> " << endl;
+    // cout << "MedicalStaff Destructor  --> " << endl;
     count --;
 }
 
 void MedicalStaff::introduce()
 {
-    cout << "Hi! i am MedicalStaff ID: " << PassengerId << endl;
+    cout << "-------------------------------------------"<< endl;
+    cout << "Hi ! I am MedicalStaff:\t"<<PassengerId << endl;
+    cout << "Current Floor:\t"<<CurrentFloor<< endl;
+    cout << "Destination Floor:\t" << DestinationFloor << endl;
 }
 
 void MedicalStaff::emergency()

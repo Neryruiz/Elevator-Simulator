@@ -27,9 +27,10 @@ RandomGenerator::~RandomGenerator()
     cout << "Destructor called " << endl;
 }
 
-int RandomGenerator::generateRandomNumber(int low, int high)
-{
-    srand(time(0));
-    int num = rand() % high;
-    return num;
+int RandomGenerator::generateRandomNumber(int low, int high){
+
+    std::random_device dev;
+    std::mt19937 rng(dev());
+    std::uniform_int_distribution<std::mt19937::result_type> dist6(low,high);
+    return dist6(rng);
 }

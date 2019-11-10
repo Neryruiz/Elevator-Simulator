@@ -204,6 +204,33 @@ Elevators.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.s
 .PHONY : Elevators.cpp.s
 
+FileRead.o: FileRead.cpp.o
+
+.PHONY : FileRead.o
+
+# target to build an object file
+FileRead.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.o
+.PHONY : FileRead.cpp.o
+
+FileRead.i: FileRead.cpp.i
+
+.PHONY : FileRead.i
+
+# target to preprocess a source file
+FileRead.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.i
+.PHONY : FileRead.cpp.i
+
+FileRead.s: FileRead.cpp.s
+
+.PHONY : FileRead.s
+
+# target to generate assembly for a file
+FileRead.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.s
+.PHONY : FileRead.cpp.s
+
 MedicalStaff.o: MedicalStaff.cpp.o
 
 .PHONY : MedicalStaff.o
@@ -311,6 +338,33 @@ People.s: People.cpp.s
 People.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/People.cpp.s
 .PHONY : People.cpp.s
+
+Probablity.o: Probablity.cpp.o
+
+.PHONY : Probablity.o
+
+# target to build an object file
+Probablity.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Probablity.cpp.o
+.PHONY : Probablity.cpp.o
+
+Probablity.i: Probablity.cpp.i
+
+.PHONY : Probablity.i
+
+# target to preprocess a source file
+Probablity.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Probablity.cpp.i
+.PHONY : Probablity.cpp.i
+
+Probablity.s: Probablity.cpp.s
+
+.PHONY : Probablity.s
+
+# target to generate assembly for a file
+Probablity.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Probablity.cpp.s
+.PHONY : Probablity.cpp.s
 
 RandomGenerator.o: RandomGenerator.cpp.o
 
@@ -420,6 +474,33 @@ Staff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/Staff.cpp.s
 .PHONY : Staff.cpp.s
 
+StringHelper.o: StringHelper.cpp.o
+
+.PHONY : StringHelper.o
+
+# target to build an object file
+StringHelper.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StringHelper.cpp.o
+.PHONY : StringHelper.cpp.o
+
+StringHelper.i: StringHelper.cpp.i
+
+.PHONY : StringHelper.i
+
+# target to preprocess a source file
+StringHelper.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StringHelper.cpp.i
+.PHONY : StringHelper.cpp.i
+
+StringHelper.s: StringHelper.cpp.s
+
+.PHONY : StringHelper.s
+
+# target to generate assembly for a file
+StringHelper.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/StringHelper.cpp.s
+.PHONY : StringHelper.cpp.s
+
 SupportStaff.o: SupportStaff.cpp.o
 
 .PHONY : SupportStaff.o
@@ -473,6 +554,33 @@ SystemController.s: SystemController.cpp.s
 SystemController.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.s
 .PHONY : SystemController.cpp.s
+
+TrafficGenerator.o: TrafficGenerator.cpp.o
+
+.PHONY : TrafficGenerator.o
+
+# target to build an object file
+TrafficGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o
+.PHONY : TrafficGenerator.cpp.o
+
+TrafficGenerator.i: TrafficGenerator.cpp.i
+
+.PHONY : TrafficGenerator.i
+
+# target to preprocess a source file
+TrafficGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.i
+.PHONY : TrafficGenerator.cpp.i
+
+TrafficGenerator.s: TrafficGenerator.cpp.s
+
+.PHONY : TrafficGenerator.s
+
+# target to generate assembly for a file
+TrafficGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.s
+.PHONY : TrafficGenerator.cpp.s
 
 Visitors.o: Visitors.cpp.o
 
@@ -546,6 +654,9 @@ help:
 	@echo "... Elevators.o"
 	@echo "... Elevators.i"
 	@echo "... Elevators.s"
+	@echo "... FileRead.o"
+	@echo "... FileRead.i"
+	@echo "... FileRead.s"
 	@echo "... MedicalStaff.o"
 	@echo "... MedicalStaff.i"
 	@echo "... MedicalStaff.s"
@@ -558,6 +669,9 @@ help:
 	@echo "... People.o"
 	@echo "... People.i"
 	@echo "... People.s"
+	@echo "... Probablity.o"
+	@echo "... Probablity.i"
+	@echo "... Probablity.s"
 	@echo "... RandomGenerator.o"
 	@echo "... RandomGenerator.i"
 	@echo "... RandomGenerator.s"
@@ -570,12 +684,18 @@ help:
 	@echo "... Staff.o"
 	@echo "... Staff.i"
 	@echo "... Staff.s"
+	@echo "... StringHelper.o"
+	@echo "... StringHelper.i"
+	@echo "... StringHelper.s"
 	@echo "... SupportStaff.o"
 	@echo "... SupportStaff.i"
 	@echo "... SupportStaff.s"
 	@echo "... SystemController.o"
 	@echo "... SystemController.i"
 	@echo "... SystemController.s"
+	@echo "... TrafficGenerator.o"
+	@echo "... TrafficGenerator.i"
+	@echo "... TrafficGenerator.s"
 	@echo "... Visitors.o"
 	@echo "... Visitors.i"
 	@echo "... Visitors.s"

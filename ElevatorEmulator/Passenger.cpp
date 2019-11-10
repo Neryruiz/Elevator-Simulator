@@ -14,7 +14,7 @@ using namespace std;
 
 Passenger::Passenger()
 {
-    cout << "Passenger class Constructor called ---->" << endl;
+    // cout << "Passenger class Constructor called ---->" << endl;
 
 
 }
@@ -22,14 +22,8 @@ Passenger::Passenger()
 
 Passenger::~Passenger()
 {
-    cout << "Passenger class Destructor called ------>" << endl;cout.flush();
+    //cout << "Passenger class Destructor called ------>" << endl;cout.flush();
 }
-
-//int Passenger::GetCount()
-//{
-//    return Counter::GetCount();
-//}
-
 
 void Passenger::RequestFloor()
 {

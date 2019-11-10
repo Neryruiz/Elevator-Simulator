@@ -98,6 +98,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/FileRead.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/FileRead.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/MedicalStaff.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
@@ -120,6 +126,12 @@
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/People.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Probablity.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Probablity.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/RandomGenerator.cpp">
@@ -146,6 +158,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Staff.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StringHelper.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/StringHelper.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SupportStaff.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
@@ -156,6 +174,12 @@
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/SystemController.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/TrafficGenerator.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/TrafficGenerator.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Visitors.cpp">
