@@ -37,10 +37,10 @@ Visitors::~Visitors()
 
 void Visitors::introduce()
 {
-    cout << "-------------------------------------------"<< endl;
-    cout << "Hi ! I am Visitor:\t"<<PassengerId << endl;
-    cout << "Current Floor:\t"<<CurrentFloor<< endl;
-    cout << "Destination Floor:\t"<<DestinationFloor<< endl;
 
+    cout << "\t\tHi ! I am Visitor:\t"<<PassengerId << endl;
+    cout << "\t\tCurrent Floor:\t"<<CurrentFloor<< endl;
+    cout << "\t\tDestination Floor:\t"<<DestinationFloor<< endl;
+    cout <<"\n";
 
 }

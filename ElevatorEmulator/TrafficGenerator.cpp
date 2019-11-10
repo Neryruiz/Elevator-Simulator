@@ -27,6 +27,7 @@ using namespace std;
 #include "Patients.h"
 
 
+#include "Elevators.h"
 
 TrafficGenerator::~TrafficGenerator()
 {
@@ -43,16 +44,12 @@ TrafficGenerator::TrafficGenerator(std::string Path)
 
     Data = reader->Data;                            // setting up Data so i can use Globally
     floor = reader->Data[1].at(0);                  // Row 1
-    // cout << "floor :\t" << floor << endl;
 
     totalNumberElevator = reader->Data[2].at(0);    // Row 2
     capacity = reader->Data[2].at(1);               // Row 2
-    // cout << "Capacity:\t" << capacity << endl;
-    // cout << "Total Elevator :\t" << totalNumberElevator << endl;
 
     // Row 3
     TotalPassenger = reader->Data[3].at(0);
-    // cout << "Total Passengers " << TotalPassenger << endl;
 
     // Row 4  Visitors
     visitor = reader->Data[4];
@@ -75,22 +72,34 @@ TrafficGenerator::TrafficGenerator(){
     // cout << "Destructor " << endl;
 }
 
-void TrafficGenerator::generateTraffic()
+
+void TrafficGenerator::display(std::string name,vector<std::string> type, int count)
 {
     cout << "\n";
-    cout << "========================================================================================"<< endl;cout<<"\n";
-    cout << "======================="<< endl;
-    cout << "Visitors"<< endl;
-    cout << "======================="<< endl;
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\t\t\t\t" << name << endl;
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\tStarted generation of "<< name  << endl;cout<<"\n";
 
-    cout << "Started generation of Passenger ------>" << endl;cout<<"\n";cout<<"\n";
-    cout << "Generating  Visitors based on following Specification------- > " << endl;
-    for(auto x:visitor){cout << x<< " ";}cout <<"\n";
+}
+
+void TrafficGenerator::introducePassenger(int low, int high, Passenger *passenger []){
     cout << "\n";
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\t\t" << "Passenger in Bulding are : " << endl;
+    cout << "\t\t==============================="<< endl;
 
-    cout << "Total Visitors Generated " << Probablity::roundoff(Data[4].at(1),TotalPassenger ) << endl;
+    for(int i=low; i<8; i++)
+    {
+        cout << i << ")" << endl;
+        passenger[i]->introduce();
+    }
+}
 
+void TrafficGenerator::generateTraffic()
+{
 
+    display("visitors", visitor, Probablity::roundoff(Data[4].at(1),TotalPassenger ));
     Passenger *passenger[StringHelper::string_to_int(TotalPassenger)];
 
 
@@ -109,17 +118,11 @@ void TrafficGenerator::generateTraffic()
                 StringHelper::string_to_int( Data[1].at(0)));
     }
 
-    for (int i=0; i<Probablity::roundoff(Data[4].at(1),TotalPassenger); i++)
-    {
-        passenger[i]->introduce();
-    }
-
-
-
-    /*
+      /*
       * Patients
       */
 
+    display("Patients", patient, Probablity::roundoff(Data[5].at(1), TotalPassenger));
     int PatientTotal = Probablity::roundoff(Data[5].at(1), TotalPassenger);
 
     // visitors previous index where its stops
@@ -127,17 +130,6 @@ void TrafficGenerator::generateTraffic()
 
     // for Loop should Go from
     // 2 to 2+3 items
-
-    cout << "========================================================================================"<< endl;cout<<"\n";
-    cout << "======================="<< endl;
-    cout << "Patients"<< endl;
-    cout << "======================="<< endl;
-
-
-    cout << "\n";
-    cout << "Generating Passengers based on Requirment Specified " << endl;
-    cout << "\n";
-    for(auto x:patient){cout << x << " ";}cout<<"\n";
 
     for (int i=v_p_index; i<v_p_index+PatientTotal; i++)
     {
@@ -148,30 +140,16 @@ void TrafficGenerator::generateTraffic()
 
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                 StringHelper::string_to_int( Data[1].at(0)));
-    }
 
-    for (int i=v_p_index; i<v_p_index+PatientTotal; i++)
-    {
-        passenger[i]->introduce();
 
     }
-
 
 
     /*
      * Support Staff
      */
 
-    cout << "========================================================================================"<< endl;cout<<"\n";
-    cout << "======================="<< endl;
-    cout << "Support Staff"<< endl;
-    cout << "======================="<< endl;
-
-    cout << "\n";
-    cout << "Generating Passengers based on Requirment Specified " << endl;
-    cout << "\n";
-    for(auto x:supportstaff){cout << x << " ";}cout<<"\n";
-
+    display("Support Staff", supportstaff, Probablity::roundoff(Data[6].at(2), TotalPassenger));
     // for loop goes from
     int s_p_index = v_p_index+PatientTotal;
     int SupportStaffTotal = Probablity::roundoff(Data[6].at(2), TotalPassenger);
@@ -186,29 +164,11 @@ void TrafficGenerator::generateTraffic()
                 StringHelper::string_to_int( Data[1].at(0)));
     }
 
-    for(int i=s_p_index; i<s_p_index+SupportStaffTotal; i++)
-    {
-        passenger[i]->introduce();
-    }
+     /*
+     * Medical  Staff
+     */
 
-
-
-
-
-
-    /*
- * Support Staff
- */
-
-    cout << "========================================================================================"<< endl;cout<<"\n";
-    cout << "======================="<< endl;
-    cout << "Medical  Staff"<< endl;
-    cout << "======================="<< endl;
-
-    cout << "\n";
-    cout << "Generating Medical  Staff based on Requirment Specified " << endl;
-    cout << "\n";
-    for(auto x:medicalstaff){cout << x << " ";}cout<<"\n";
+     display("Medical  Staff", medicalstaff, Probablity::roundoff(Data[7].at(2), TotalPassenger));
 
     // for loop goes from
     int m_p_index = v_p_index+PatientTotal;
@@ -224,30 +184,11 @@ void TrafficGenerator::generateTraffic()
                                                                                StringHelper::string_to_int( Data[1].at(0)));
     }
 
-    for(int i=m_p_index; i<m_p_index+MedicalStaffTotal; i++)
-    {
-        passenger[i]->introduce();
-    }
-
-
-
-
-
-
-
     /*
-* Security Staff
-*/
+    * Security Staff
+    */
 
-    cout << "========================================================================================"<< endl;cout<<"\n";
-    cout << "======================="<< endl;
-    cout << "Security Staff"<< endl;
-    cout << "======================="<< endl;
-
-    cout << "\n";
-    cout << "Generating Security Staff   based on Requirment Specified " << endl;
-    cout << "\n";
-    for(auto x:securitystaff){cout << x << " ";}cout<<"\n";
+    display("Security Staff", securitystaff, Probablity::roundoff(Data[8].at(2), TotalPassenger));
 
     // for loop goes from
     int sec_p_index = m_p_index+MedicalStaffTotal;
@@ -263,14 +204,19 @@ void TrafficGenerator::generateTraffic()
                                                                                StringHelper::string_to_int( Data[1].at(0)));
     }
 
-    for(int i=sec_p_index; i<sec_p_index+SECStaffTotal; i++)
+    introducePassenger(0,StringHelper::string_to_int(TotalPassenger), passenger);
+
+    cout << "\t\t======================================"<< endl;
+    cout << "\t\t\t" << "There are 4 Elevator in Bulding " << endl;
+    cout << "\t\t======================================"<< endl;
+
+    Elevators *elevator[StringHelper::string_to_int(totalNumberElevator)];
+    for (int i=0; i<StringHelper::string_to_int(totalNumberElevator); i++)
     {
-        passenger[i]->introduce();
+        elevator[i] = new Elevators();
+        elevator[i]->maxCapacity = StringHelper::string_to_int(capacity);
     }
 
 
 
-
-
-    cout << "------------------------------------------------------------>" << endl;
 }

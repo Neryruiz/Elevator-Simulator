@@ -61,6 +61,7 @@ CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../SupportStaff.h
 CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.cpp
 CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.h
 
+CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../Elevators.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../FileRead.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../MedicalStaff.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../Passenger.h

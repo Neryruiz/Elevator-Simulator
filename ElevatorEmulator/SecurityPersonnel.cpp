@@ -13,7 +13,7 @@ int SecurityPersonnel::count = 0;
 
 SecurityPersonnel::SecurityPersonnel()
 {
-    cout << "SecurityPersonall Constructor " << endl;
+    //cout << "SecurityPersonall Constructor " << endl;
 
     string uniqueId =  "SEC";
     count++;
@@ -29,10 +29,10 @@ SecurityPersonnel::~SecurityPersonnel()
 
 void SecurityPersonnel::introduce()
 {
-    cout << "-------------------------------------------"<< endl;
-    cout << "Hi ! I am SecurityPersonnel:\t"<<PassengerId << endl;
-    cout << "Current Floor:\t"<<CurrentFloor<< endl;
-    cout << "Destination Floor:\t" << DestinationFloor << endl;
+    cout << "\t\tHi ! I am SecurityPersonnel:\t"<<PassengerId << endl;
+    cout << "\t\tCurrent Floor:\t"<<CurrentFloor<< endl;
+    cout << "\t\tDestination Floor:\t"<<DestinationFloor<< endl;
+    cout <<"\n";
 }
 
 void SecurityPersonnel::evacuate()

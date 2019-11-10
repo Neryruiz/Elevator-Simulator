@@ -54,6 +54,8 @@ public:
      */
 
     void generateTraffic();
+    void display(std::string name,vector<std::string> type, int count);
+    void introducePassenger(int low, int high,Passenger *passenger []);
 
 };
 

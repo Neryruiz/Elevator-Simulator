@@ -135,6 +135,12 @@ class TrafficGenerator{
     vector<string> medicalstaff;
     vector<string> securitystaff;
 
+    TrafficGenerator();
+    TrafficGenerator(std::string Path);
+    ~TrafficGenerator();
+        void generateTraffic();
+    void display(std::string name,vector<std::string> type, int count);
+
 
 }
 
@@ -149,6 +155,10 @@ class Probablity{
      {static} int roundoff(string probablity, string num);
 
 }
+
+Passenger *-- TrafficGenerator : Has  Passenger
+Elevator *-- Bulding : Has a Relationship
+TrafficGenerator *-- Bulding : Has a Relationship
 
 
 @enduml

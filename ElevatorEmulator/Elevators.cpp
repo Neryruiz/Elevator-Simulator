@@ -6,12 +6,12 @@ using namespace std;
 
 
 Elevators::Elevators():maxCapacity{0}{
-    cout << "Elevators contr" <<endl;
+    // cout << "Elevators contr" <<endl;
 }
 
 Elevators::~Elevators()
 {
-    cout << "Elevators Dest " << endl;
+    // cout << "Elevators Dest " << endl;
 }
 
 
