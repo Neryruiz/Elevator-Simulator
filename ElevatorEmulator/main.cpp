@@ -19,6 +19,9 @@ using namespace std;
 #include "Passenger.h"
 #include "Visitors.h"
 #include "RandomGenerator.h"
+#include "DateTime.h"
+
+
 using namespace std;
 
 int main() {
@@ -31,17 +34,9 @@ int main() {
     generator = new TrafficGenerator(path);
 
     generator->generateTraffic();
+    generator->generateTraffic();
 
-//
-//    for (int i=0; i<8;i++)
-//    {
-//        std::random_device dev;
-//        std::mt19937 rng(dev());
-//        std::uniform_int_distribution<std::mt19937::result_type> dist6(0,6); // distribution in range [0, 6]
-//
-//        cout << "Random : " << dist6(rng) << endl;
-//    }
-
+    generator->populateElevator();
 
     delete generator;
 

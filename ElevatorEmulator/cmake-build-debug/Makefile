@@ -177,6 +177,33 @@ DateTime.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.s
 .PHONY : DateTime.cpp.s
 
+ElevatorDirection.o: ElevatorDirection.cpp.o
+
+.PHONY : ElevatorDirection.o
+
+# target to build an object file
+ElevatorDirection.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.o
+.PHONY : ElevatorDirection.cpp.o
+
+ElevatorDirection.i: ElevatorDirection.cpp.i
+
+.PHONY : ElevatorDirection.i
+
+# target to preprocess a source file
+ElevatorDirection.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.i
+.PHONY : ElevatorDirection.cpp.i
+
+ElevatorDirection.s: ElevatorDirection.cpp.s
+
+.PHONY : ElevatorDirection.s
+
+# target to generate assembly for a file
+ElevatorDirection.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorEmulator.dir/build.make CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.s
+.PHONY : ElevatorDirection.cpp.s
+
 Elevators.o: Elevators.cpp.o
 
 .PHONY : Elevators.o
@@ -651,6 +678,9 @@ help:
 	@echo "... DateTime.o"
 	@echo "... DateTime.i"
 	@echo "... DateTime.s"
+	@echo "... ElevatorDirection.o"
+	@echo "... ElevatorDirection.i"
+	@echo "... ElevatorDirection.s"
 	@echo "... Elevators.o"
 	@echo "... Elevators.i"
 	@echo "... Elevators.s"

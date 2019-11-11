@@ -34,6 +34,7 @@ void SupportStaff::introduce()
     cout << "\t\tHi ! I am SupportStaff:\t"<<PassengerId << endl;
     cout << "\t\tCurrent Floor:\t"<<CurrentFloor<< endl;
     cout << "\t\tDestination Floor:\t"<<DestinationFloor<< endl;
+    cout << "\t\tI want to go :\t"<<DirectionPassenger<< endl;
     cout <<"\n";
 }
 

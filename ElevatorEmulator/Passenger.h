@@ -26,6 +26,7 @@ public:
     int Weight;
     int CurrentFloor;
     int DestinationFloor;
+    char DirectionPassenger;
 
     std::string CreationRTime;
     std::string GetTime;

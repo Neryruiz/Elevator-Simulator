@@ -31,13 +31,21 @@ virtual void emergency ()=0;
 }
 
 class Passenger{
-+ string passengerID
-+ int weight
-+ int currentFloor
-+ string getonTime
-+ string getoffTime
-+ requestFloor()
-+ findwaitTime()
+    std::string PassengerId;
+    int Weight;
+    int CurrentFloor;
+    int DestinationFloor;
+    char DirectionPassenger;
+
+    std::string CreationRTime;
+    std::string GetTime;
+    std::string GetOffTime;
+
+        void RequestFloor();
+    void FindWaitTime();
+    virtual void introduce();
+        Passenger();        // No args Constructor
+    virtual ~Passenger();
 }
 
 class Visitors{
@@ -123,11 +131,13 @@ Bulding(int floor)
 class SystemController{
 }
 class TrafficGenerator{
-
     map<int, vector<std::string>> Data;
+    map<int,vector<Passenger *>> Levels;
+
     string floor;
     string totalNumberElevator;
     string capacity;
+    string TotalPassenger;
 
     vector<string> visitor;
     vector<string> patient;
@@ -135,12 +145,13 @@ class TrafficGenerator{
     vector<string> medicalstaff;
     vector<string> securitystaff;
 
-    TrafficGenerator();
+        TrafficGenerator();
     TrafficGenerator(std::string Path);
     ~TrafficGenerator();
-        void generateTraffic();
-    void display(std::string name,vector<std::string> type, int count);
 
+    map<int, vector<Passenger *>> generateTraffic();
+    void display(std::string name,vector<std::string> type, int count);
+    void introducePassenger(int low, int high,Passenger *passenger []);
 
 }
 
@@ -157,8 +168,11 @@ class Probablity{
 }
 
 Passenger *-- TrafficGenerator : Has  Passenger
-Elevator *-- Bulding : Has a Relationship
-TrafficGenerator *-- Bulding : Has a Relationship
+TrafficGenerator *-- Elevators : Has a Relationship
 
+
+class ElevatorDirection{
+static char checkDirection(string currentFloor, string DestinationFloor);
+}
 
 @enduml

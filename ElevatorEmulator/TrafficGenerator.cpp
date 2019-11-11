@@ -25,7 +25,7 @@ using namespace std;
 #include "MedicalStaff.h"
 #include "Security.h"
 #include "Patients.h"
-
+#include "ElevatorDirection.h"
 
 #include "Elevators.h"
 
@@ -66,6 +66,15 @@ TrafficGenerator::TrafficGenerator(std::string Path)
     // Row 8 Security
     securitystaff = reader->Data[8];
 
+    // Elevator Logic
+        Elevators *elevators[StringHelper::string_to_int(Data[2].at(0))];
+
+
+        for (int i=0; i < StringHelper::string_to_int(Data[2].at(0)); i++){
+            elevators[i] = new Elevators(StringHelper::string_to_int(Data[1].at(0)));
+            elevators[i]->maxCapacity = StringHelper::string_to_int(Data[2].at(1));
+        }
+
 }
 
 TrafficGenerator::TrafficGenerator(){
@@ -89,7 +98,7 @@ void TrafficGenerator::introducePassenger(int low, int high, Passenger *passenge
     cout << "\t\t\t" << "Passenger in Bulding are : " << endl;
     cout << "\t\t==============================="<< endl;
 
-    for(int i=low; i<8; i++)
+    for(int i=low; i<high; i++)
     {
         cout << i << ")" << endl;
         passenger[i]->introduce();
@@ -100,7 +109,7 @@ void TrafficGenerator::generateTraffic()
 {
 
     display("visitors", visitor, Probablity::roundoff(Data[4].at(1),TotalPassenger ));
-    Passenger *passenger[StringHelper::string_to_int(TotalPassenger)];
+    Passenger *passenger[StringHelper::string_to_int(TotalPassenger)+1];
 
 
     /*
@@ -110,12 +119,21 @@ void TrafficGenerator::generateTraffic()
 
     for (int i=0; i<Probablity::roundoff(Data[4].at(1),TotalPassenger ); i++)
     {
+        // Current Floor
         passenger[i] = new Visitors();
         passenger[i]->CurrentFloor = RandomGenerator::generateRandomNumber(0,
                 StringHelper::string_to_int( Data[1].at(0)));
 
+        // Destination Floor
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                 StringHelper::string_to_int( Data[1].at(0)));
+
+        // Weights
+        passenger[i]->Weight=1;
+
+        // Passenger Direction
+        passenger[i]->DirectionPassenger = ElevatorDirection::checkDirection(std::to_string(passenger[i]->CurrentFloor),
+                std::to_string(passenger[i]->DestinationFloor));
     }
 
       /*
@@ -141,6 +159,13 @@ void TrafficGenerator::generateTraffic()
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                 StringHelper::string_to_int( Data[1].at(0)));
 
+        passenger[i]->Weight= RandomGenerator::generateRandomNumber(StringHelper::string_to_int(Data[5].at(7)),
+                                                                    StringHelper::string_to_int(Data[5].at(8)));
+
+        // Passenger Direction
+        passenger[i]->DirectionPassenger = ElevatorDirection::checkDirection(std::to_string(passenger[i]->CurrentFloor),
+                                                                             std::to_string(passenger[i]->DestinationFloor));
+
 
     }
 
@@ -149,9 +174,11 @@ void TrafficGenerator::generateTraffic()
      * Support Staff
      */
 
+
     display("Support Staff", supportstaff, Probablity::roundoff(Data[6].at(2), TotalPassenger));
     // for loop goes from
     int s_p_index = v_p_index+PatientTotal;
+
     int SupportStaffTotal = Probablity::roundoff(Data[6].at(2), TotalPassenger);
 
     for(int i=s_p_index; i<s_p_index+SupportStaffTotal; i++)
@@ -162,6 +189,14 @@ void TrafficGenerator::generateTraffic()
 
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                 StringHelper::string_to_int( Data[1].at(0)));
+
+        passenger[i]->Weight= RandomGenerator::generateRandomNumber(StringHelper::string_to_int(Data[6].at(8)),
+                StringHelper::string_to_int(Data[6].at(9)));
+
+
+        // Passenger Direction
+        passenger[i]->DirectionPassenger = ElevatorDirection::checkDirection(std::to_string(passenger[i]->CurrentFloor),
+                                                                             std::to_string(passenger[i]->DestinationFloor));
     }
 
      /*
@@ -171,7 +206,7 @@ void TrafficGenerator::generateTraffic()
      display("Medical  Staff", medicalstaff, Probablity::roundoff(Data[7].at(2), TotalPassenger));
 
     // for loop goes from
-    int m_p_index = v_p_index+PatientTotal;
+    int m_p_index = s_p_index+PatientTotal;
     int MedicalStaffTotal = Probablity::roundoff(Data[7].at(2), TotalPassenger);
 
     for(int i=m_p_index; i<m_p_index+MedicalStaffTotal; i++)
@@ -182,6 +217,12 @@ void TrafficGenerator::generateTraffic()
 
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                                                                                StringHelper::string_to_int( Data[1].at(0)));
+        passenger[i]->Weight=1;
+
+
+        // Passenger Direction
+        passenger[i]->DirectionPassenger = ElevatorDirection::checkDirection(std::to_string(passenger[i]->CurrentFloor),
+                                                                             std::to_string(passenger[i]->DestinationFloor));
     }
 
     /*
@@ -202,21 +243,92 @@ void TrafficGenerator::generateTraffic()
 
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
                                                                                StringHelper::string_to_int( Data[1].at(0)));
+
+        passenger[i]->Weight=1;
+
+
+        // Passenger Direction
+        passenger[i]->DirectionPassenger = ElevatorDirection::checkDirection(std::to_string(passenger[i]->CurrentFloor),
+                                                                             std::to_string(passenger[i]->DestinationFloor));
     }
 
-    introducePassenger(0,StringHelper::string_to_int(TotalPassenger), passenger);
+    introducePassenger(0,StringHelper::string_to_int(TotalPassenger)+1, passenger);
 
-    cout << "\t\t======================================"<< endl;
-    cout << "\t\t\t" << "There are 4 Elevator in Bulding " << endl;
-    cout << "\t\t======================================"<< endl;
 
-    Elevators *elevator[StringHelper::string_to_int(totalNumberElevator)];
-    for (int i=0; i<StringHelper::string_to_int(totalNumberElevator); i++)
+        // LEVEL DATA STRUCTURE
+        for(int j=0; j<StringHelper::string_to_int(TotalPassenger)+1; j++)
+        {
+            Levels[passenger[j]->CurrentFloor].push_back(passenger[j]);
+
+        }
+
+
+}
+
+
+void TrafficGenerator::displayFloorStatus()
+{
+    cout << "\n";
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\t\t\t\t" << "Passenger at Each Floor " << endl;
+    cout << "\t\t==============================="<< endl;
+    cout << "\n";
+
+
+    for(int i=0;i<StringHelper::string_to_int(Data[1].at(0)); i++)
     {
-        elevator[i] = new Elevators();
-        elevator[i]->maxCapacity = StringHelper::string_to_int(capacity);
+        cout << "Floor : " << i << "  Passenger : " ;
+
+        for (auto x: Levels[i])
+        {
+            cout << x->PassengerId << " ";
+        }cout << "\n";
+
     }
+}
 
 
+void TrafficGenerator::addPassengerToVectors()
+{
+    // For Each Floor
+    for(int i=0;i<StringHelper::string_to_int(Data[1].at(0)); i++)
+    {
+        // Each Passenger in Each Floor Check
+        // Whether Going up or Down
 
+        for (auto x: Levels[i])
+        {
+
+            if (x->DirectionPassenger == 'U')
+            {
+                // push the pointer of that passenger
+                PassengerGoingUp.push_back(x);
+            }
+
+            if (x->DirectionPassenger == 'D')
+            {
+                PassengerGoingDown.push_back(x);
+            }
+
+            if (x->DirectionPassenger == 'N')
+            {
+                PassengerGoingNone.push_back(x);
+            }
+
+        }
+    }
+}
+
+
+void TrafficGenerator::populateElevator()
+{
+    /*
+     * once the Traffic is generated and populated in Levels
+     * we want to push everyone in Queue
+     * we have two Queue Up and Down
+     * we need to Iterate over LevelFloor Data Structure
+     */
+
+    displayFloorStatus();
+    addPassengerToVectors();
 }

@@ -34,5 +34,7 @@ void Patients::introduce()
     cout << "\t\tHi ! I am Patients:\t"<<PassengerId << endl;
     cout << "\t\tCurrent Floor:\t"<<CurrentFloor<< endl;
     cout << "\t\tDestination Floor:\t"<<DestinationFloor<< endl;
+    cout << "\t\tWeight :\t"<<Weight<< endl;
+    cout << "\t\tI want to go :\t"<<DirectionPassenger<< endl;
     cout <<"\n";
 }

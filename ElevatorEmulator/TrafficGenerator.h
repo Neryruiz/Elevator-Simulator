@@ -15,6 +15,7 @@
 #include "SupportStaff.h"
 #include "MedicalStaff.h"
 #include "SecurityPersonnel.h"
+#include "Elevators.h"
 
 
 class TrafficGenerator {
@@ -26,11 +27,12 @@ public:
 
     // Call FileRead class and sets Data Attributes in Constructor
     map<int, vector<std::string>> Data;
-    string floor;
+    map<int,vector<Passenger *>> Levels;
 
+
+    string floor;
     string totalNumberElevator;
     string capacity;
-
     string TotalPassenger;
 
 
@@ -39,6 +41,11 @@ public:
     vector<string> supportstaff;
     vector<string> medicalstaff;
     vector<string> securitystaff;
+    vector <Passenger *> PassengerGoingUp;
+    vector <Passenger *> PassengerGoingDown;
+    vector <Passenger *> PassengerGoingNone;
+
+
 
 public:
     /*
@@ -53,9 +60,12 @@ public:
      * Methods
      */
 
-    void generateTraffic();
+    void  generateTraffic();
     void display(std::string name,vector<std::string> type, int count);
     void introducePassenger(int low, int high,Passenger *passenger []);
+    void populateElevator();
+    void displayFloorStatus();
+    void addPassengerToVectors();
 
 };
 

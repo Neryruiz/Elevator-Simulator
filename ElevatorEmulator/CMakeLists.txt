@@ -11,4 +11,4 @@ add_executable(ElevatorEmulator main.cpp
         Staff.cpp Staff.h Security.cpp Security.h People.cpp People.h
         SystemController.cpp SystemController.h RandomGenerator.cpp
         RandomGenerator.h DateTime.cpp DateTime.h Bulding.cpp
-        Bulding.h Elevators.cpp Elevators.h FileRead.cpp FileRead.h TrafficGenerator.cpp TrafficGenerator.h StringHelper.cpp StringHelper.h Probablity.cpp Probablity.h)
+        Bulding.h Elevators.cpp Elevators.h FileRead.cpp FileRead.h TrafficGenerator.cpp TrafficGenerator.h StringHelper.cpp StringHelper.h Probablity.cpp Probablity.h ElevatorDirection.cpp ElevatorDirection.h)

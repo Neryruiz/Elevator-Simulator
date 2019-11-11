@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o"
   "CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o"
+  "CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.o"
   "CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o"
   "CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.o"
   "CMakeFiles/ElevatorEmulator.dir/MedicalStaff.cpp.o"

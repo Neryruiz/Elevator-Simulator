@@ -1,5 +1,11 @@
 #include <iostream>
 #include <string>
+#include <iostream>
+#include <ctime>
+#include <chrono>
+#include <sstream>
+#include <string>
+
 
 #include "StringHelper.h"
 
@@ -16,3 +22,11 @@ float StringHelper::string_to_float(std::string num)
     number = stof(num);
     return number;
 }
+
+
+char StringHelper::time_tToChar(time_t t)
+{
+    char* dt = ctime(&t);
+    return *dt;
+}
+

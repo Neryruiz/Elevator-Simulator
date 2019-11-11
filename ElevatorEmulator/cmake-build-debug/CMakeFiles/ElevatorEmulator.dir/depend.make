@@ -7,8 +7,13 @@ CMakeFiles/ElevatorEmulator.dir/Bulding.cpp.o: ../Bulding.h
 CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o: ../DateTime.cpp
 CMakeFiles/ElevatorEmulator.dir/DateTime.cpp.o: ../DateTime.h
 
+CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.o: ../ElevatorDirection.cpp
+CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.o: ../ElevatorDirection.h
+CMakeFiles/ElevatorEmulator.dir/ElevatorDirection.cpp.o: ../StringHelper.h
+
 CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o: ../Elevators.cpp
 CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o: ../Elevators.h
+CMakeFiles/ElevatorEmulator.dir/Elevators.cpp.o: ../Passenger.h
 
 CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.o: ../FileRead.cpp
 CMakeFiles/ElevatorEmulator.dir/FileRead.cpp.o: ../FileRead.h
@@ -61,6 +66,7 @@ CMakeFiles/ElevatorEmulator.dir/SupportStaff.cpp.o: ../SupportStaff.h
 CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.cpp
 CMakeFiles/ElevatorEmulator.dir/SystemController.cpp.o: ../SystemController.h
 
+CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../ElevatorDirection.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../Elevators.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../FileRead.h
 CMakeFiles/ElevatorEmulator.dir/TrafficGenerator.cpp.o: ../MedicalStaff.h
@@ -83,6 +89,8 @@ CMakeFiles/ElevatorEmulator.dir/Visitors.cpp.o: ../People.h
 CMakeFiles/ElevatorEmulator.dir/Visitors.cpp.o: ../Visitors.cpp
 CMakeFiles/ElevatorEmulator.dir/Visitors.cpp.o: ../Visitors.h
 
+CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../DateTime.h
+CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Elevators.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../FileRead.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../MedicalStaff.h
 CMakeFiles/ElevatorEmulator.dir/main.cpp.o: ../Passenger.h

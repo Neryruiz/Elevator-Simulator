@@ -92,6 +92,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/DateTime.h">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/ElevatorDirection.cpp">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/ElevatorDirection.h">
+			<Option target="ElevatorEmulator"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorEmulator/Elevators.cpp">
 			<Option target="ElevatorEmulator"/>
 		</Unit>
