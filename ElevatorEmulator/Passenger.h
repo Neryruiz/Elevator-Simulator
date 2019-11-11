@@ -28,9 +28,9 @@ public:
     int DestinationFloor;
     char DirectionPassenger;
 
-    std::string CreationRTime;
-    std::string GetTime;
-    std::string GetOffTime;
+    std::time_t CreationRTime;
+    time_t GetTime;
+    time_t GetOffTime;
 
 public:
     /*

@@ -18,34 +18,33 @@ public:
     /*
      * Attributes
      */
+
     int maxCapacity;
+    char directionElevator;
+    int elevatorCurrentFloor;
+    int static  count;
+    string ElevatorId;
+    int ElevatorWeightCounter;
+
     queue <Passenger *> Up;
     queue <Passenger *> Down;
-    int ElevatorFloor;
-    bool Direction;
-    int static count;
-    string ElevatorId;
-    int TopFloor;
+
 
 public:
     /*
      *  Constructor and Dest
      */
+
     Elevators();
-    Elevators(int topFloor);
     ~Elevators();
+
 
 public:
     /*
-     * Attributes
+     * Methods
      */
 
-
-    int getCurrentFloor();
-    void incrementCurrentFloor();
-    bool getCurrentDirection();
-    void ToggleDirection();
-
+    void elevatorIntroduce();
 };
 
 

@@ -25,6 +25,7 @@ public:
     static time_t getSeconds();
 
     static time_t getDateTime();
+    static char getDateTimechar();
     static time_t getTime();        // dont work
 
 

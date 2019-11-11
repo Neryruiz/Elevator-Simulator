@@ -26,7 +26,7 @@ using namespace std;
 #include "Security.h"
 #include "Patients.h"
 #include "ElevatorDirection.h"
-
+#include "DateTime.h"
 #include "Elevators.h"
 
 TrafficGenerator::~TrafficGenerator()
@@ -66,14 +66,13 @@ TrafficGenerator::TrafficGenerator(std::string Path)
     // Row 8 Security
     securitystaff = reader->Data[8];
 
-    // Elevator Logic
-        Elevators *elevators[StringHelper::string_to_int(Data[2].at(0))];
-
-
-        for (int i=0; i < StringHelper::string_to_int(Data[2].at(0)); i++){
-            elevators[i] = new Elevators(StringHelper::string_to_int(Data[1].at(0)));
-            elevators[i]->maxCapacity = StringHelper::string_to_int(Data[2].at(1));
-        }
+//    // Elevator Logic
+//        Elevators *elevators[StringHelper::string_to_int(Data[2].at(0))];
+//
+//        for (int i=0; i < StringHelper::string_to_int(Data[2].at(0)); i++){
+//            elevators[i] = new Elevators(StringHelper::string_to_int(Data[1].at(0)));
+//            elevators[i]->maxCapacity = StringHelper::string_to_int(Data[2].at(1));
+//        }
 
 }
 
@@ -108,9 +107,9 @@ void TrafficGenerator::introducePassenger(int low, int high, Passenger *passenge
 void TrafficGenerator::generateTraffic()
 {
 
-    display("visitors", visitor, Probablity::roundoff(Data[4].at(1),TotalPassenger ));
+    // display("visitors", visitor, Probablity::roundoff(Data[4].at(1),TotalPassenger ));
     Passenger *passenger[StringHelper::string_to_int(TotalPassenger)+1];
-
+    // cout << "=== "<< StringHelper::string_to_int(TotalPassenger)+1 << endl;
 
     /*
      * Visitors
@@ -140,7 +139,7 @@ void TrafficGenerator::generateTraffic()
       * Patients
       */
 
-    display("Patients", patient, Probablity::roundoff(Data[5].at(1), TotalPassenger));
+    // display("Patients", patient, Probablity::roundoff(Data[5].at(1), TotalPassenger));
     int PatientTotal = Probablity::roundoff(Data[5].at(1), TotalPassenger);
 
     // visitors previous index where its stops
@@ -153,7 +152,7 @@ void TrafficGenerator::generateTraffic()
     {
         passenger[i] =  new Patients();
         passenger[i]->CurrentFloor = RandomGenerator::generateRandomNumber(0,
-                StringHelper::string_to_int( Data[1].at(0)));
+                                                                           StringHelper::string_to_int( Data[1].at(0)));
 
 
         passenger[i]->DestinationFloor = RandomGenerator::generateRandomNumber(0,
@@ -175,7 +174,8 @@ void TrafficGenerator::generateTraffic()
      */
 
 
-    display("Support Staff", supportstaff, Probablity::roundoff(Data[6].at(2), TotalPassenger));
+    // display("Support Staff", supportstaff, Probablity::roundoff(Data[6].at(2), TotalPassenger));
+
     // for loop goes from
     int s_p_index = v_p_index+PatientTotal;
 
@@ -203,7 +203,7 @@ void TrafficGenerator::generateTraffic()
      * Medical  Staff
      */
 
-     display("Medical  Staff", medicalstaff, Probablity::roundoff(Data[7].at(2), TotalPassenger));
+     // display("Medical  Staff", medicalstaff, Probablity::roundoff(Data[7].at(2), TotalPassenger));
 
     // for loop goes from
     int m_p_index = s_p_index+PatientTotal;
@@ -229,7 +229,7 @@ void TrafficGenerator::generateTraffic()
     * Security Staff
     */
 
-    display("Security Staff", securitystaff, Probablity::roundoff(Data[8].at(2), TotalPassenger));
+    // display("Security Staff", securitystaff, Probablity::roundoff(Data[8].at(2), TotalPassenger));
 
     // for loop goes from
     int sec_p_index = m_p_index+MedicalStaffTotal;
@@ -252,8 +252,7 @@ void TrafficGenerator::generateTraffic()
                                                                              std::to_string(passenger[i]->DestinationFloor));
     }
 
-    introducePassenger(0,StringHelper::string_to_int(TotalPassenger)+1, passenger);
-
+     // introducePassenger(0,StringHelper::string_to_int(TotalPassenger)+1, passenger);
 
         // LEVEL DATA STRUCTURE
         for(int j=0; j<StringHelper::string_to_int(TotalPassenger)+1; j++)
@@ -269,13 +268,13 @@ void TrafficGenerator::generateTraffic()
 void TrafficGenerator::displayFloorStatus()
 {
     cout << "\n";
-    cout << "\t\t==============================="<< endl;
+    cout << "\t\t==============================================="<< endl;
     cout << "\t\t\t\t\t" << "Passenger at Each Floor " << endl;
-    cout << "\t\t==============================="<< endl;
+    cout << "\t\t==============================================="<< endl;
     cout << "\n";
 
 
-    for(int i=0;i<StringHelper::string_to_int(Data[1].at(0)); i++)
+    for(int i=0;i<=StringHelper::string_to_int(Data[1].at(0)); i++)
     {
         cout << "Floor : " << i << "  Passenger : " ;
 
@@ -291,7 +290,7 @@ void TrafficGenerator::displayFloorStatus()
 void TrafficGenerator::addPassengerToVectors()
 {
     // For Each Floor
-    for(int i=0;i<StringHelper::string_to_int(Data[1].at(0)); i++)
+    for(int i=0;i<=StringHelper::string_to_int(Data[1].at(0)); i++)
     {
         // Each Passenger in Each Floor Check
         // Whether Going up or Down
@@ -320,6 +319,96 @@ void TrafficGenerator::addPassengerToVectors()
 }
 
 
+void TrafficGenerator::passengerIntroduce()
+{
+
+    cout << "\n";
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\t\t\t\t" << " Total Passenger Generated   " << endl;
+    cout << "\t\t==============================="<< endl;
+    cout << "\n";
+
+    // for each level call introduce  Method
+    for (int i=0; i<Levels.size(); i++)
+    {
+        for(auto j:Levels[i])
+        {
+            j->introduce();
+        }
+
+    }
+
+
+}
+
+void TrafficGenerator::passengerGoingUpSummary()
+{
+
+    int TotalWeightcounter = 0;
+
+    cout << "\n";
+    cout << "\t\t========================================================"<< endl;
+    cout << "\t\t\t\t\t" << " Passenger going Up Weight Summary  " << endl;
+    cout << "\t\t======================================================="<< endl;
+    cout << "\n";
+
+    for (int i=0; i<Levels.size(); i++)
+    {
+
+        for (auto x: Levels[i])
+        {
+            if (x->DirectionPassenger == 'U')
+            {
+                TotalWeightcounter = TotalWeightcounter +  x->Weight;
+                cout << "\t\t"<< "Passenger ID: " << x->PassengerId << " Weight :" << x->Weight << endl;
+
+            }
+        }
+    }
+
+    cout << "\t\t---------------------------------------------------------"<< endl;
+    cout << "\t\t" << " Total Weight of Passenger Going Up :" <<TotalWeightcounter << endl;
+    cout << "\t\t---------------------------------------------------------\""<< endl;
+
+    TotalWeightcounter = 0;
+    cout << "\n";
+
+}
+
+void TrafficGenerator::passengerFoingDownSummary()
+{
+
+    int TotalWeightcounter = 0;
+
+    cout << "\n";
+    cout << "\t\t========================================================"<< endl;
+    cout << "\t\t\t\t\t" << " Passenger going Down Weight Summary  " << endl;
+    cout << "\t\t======================================================="<< endl;
+    cout << "\n";
+
+    for (int i=0; i<Levels.size(); i++)
+    {
+
+        for (auto x: Levels[i])
+        {
+            if (x->DirectionPassenger == 'D')
+            {
+                TotalWeightcounter = TotalWeightcounter +  x->Weight;
+                cout << "\t\t"<< "Passenger ID: " << x->PassengerId << " Weight :" << x->Weight << endl;
+
+            }
+        }
+    }
+
+    cout << "\t\t========================================================"<< endl;
+    cout << "\t\t" << " Total Weight of Passenger Going Down :" <<TotalWeightcounter << endl;
+    cout << "\t\t======================================================="<< endl;
+
+    TotalWeightcounter = 0;
+    cout << "\n";
+
+}
+
 void TrafficGenerator::populateElevator()
 {
     /*
@@ -329,6 +418,157 @@ void TrafficGenerator::populateElevator()
      * we need to Iterate over LevelFloor Data Structure
      */
 
-    displayFloorStatus();
-    addPassengerToVectors();
+
+    passengerIntroduce();           // call the introduce methods on all passenger in bulding
+    displayFloorStatus();           // display floor status for each passenger
+    addPassengerToVectors();        // add all the up going passenger to up and down queue
+    passengerGoingUpSummary();      // Passenger going up Weight Summary
+    passengerFoingDownSummary();    // Passenger going Down Summary
+
+
+
+    Elevators *elevators[StringHelper::string_to_int(Data[2].at(0))];
+
+    int TotalElevatorCount = StringHelper::string_to_int(Data[2].at(0));
+    int TotalNumberElevatorGoingUp = TotalElevatorCount / 2;
+    int TotalNumberofElevatorgoingDown = TotalElevatorCount - TotalNumberElevatorGoingUp ;
+
+
+    // for each 4 elevator
+    for (int i=0; i < StringHelper::string_to_int(Data[2].at(0)); i++)
+    {
+        elevators[i] = new Elevators();
+
+        // First Two Elevators are Starting from Level 0
+        // initialize the Char to U
+        elevators[i]->directionElevator= 'U';
+        elevators[i]->maxCapacity = StringHelper::string_to_int(Data[2].at(1));
+
+
+    }
+
+    cout << "\n";
+    cout << "\t\t==============================="<< endl;
+    cout << "\t\t\t\t\t" << "Elevators are Ready" << endl;
+    cout << "\t\t==============================="<< endl;
+    cout << "\n";
+
+    for(int j=0; j<TotalElevatorCount; j++)
+    {
+        elevators[j]->elevatorIntroduce();
+    }
+
+    cout << "\n";
+    cout << "\t\t============================================="<< endl;
+    cout << "\t\t\t\t\t" << "Elevators are Now Starting" << endl;
+    cout << "\t\t=============================================="<< endl;
+    cout << "\n";
+
+
+    /*
+     * Here There should be one more loop for each Elevators
+     * for each floor
+     * for each passenger on that floow
+     * condition
+     * chech if counterwt ic < max capacity
+     * add in queue
+     * if no
+     * next elevator will serve them
+     */
+
+
+    // For the First Elevator
+    for (int j=0; j<1 ; j++)
+    {
+        // cout << "Elevator Id " << elevators[j]->ElevatorId << endl;
+
+        // For Each all Floors
+        for(int i=0;i<=StringHelper::string_to_int(Data[1].at(0)); i++)
+        {
+            // cout << "\tFloor : " << i << "  Passenger : " << endl;
+            elevators[j]->elevatorCurrentFloor = i ;
+
+
+            // For all Passengers on that Floor
+            for (auto x: Levels[i])
+            {
+                // check if the Passenger are UP passengers
+
+                if (x->DirectionPassenger == 'U')
+                {
+                    /*
+                     * what you need to do is add these passenger into queue
+                     * check and see if counterweight is < Max Weight
+                     * if less than server the passenger
+                     * if exceeeds than next elevator will serve that passengers
+                     */
+
+                    // Add the weight to the weight couter
+                    elevators[j]->ElevatorWeightCounter = elevators[j]->ElevatorWeightCounter  + x->Weight;
+
+                    //check for condition that if weight is less than maximum capacity
+
+                    if(elevators[j]->ElevatorWeightCounter <= elevators[j]->maxCapacity
+                    and x->CurrentFloor == elevators[j]->elevatorCurrentFloor )
+                    {
+                        x->CreationRTime = DateTime::getDateTime();
+                        elevators[j]->Up.push(x);
+
+                        cout << "\n";
+                        cout << "\t\t==============================="<< endl;
+                        cout << "\t\t" << "passenger Getting ON the  Lift " << endl;
+                        cout << "\t\t" << "Id :" << x->PassengerId << endl;
+                        cout << "\t\tGot in on Floor " << x->CurrentFloor <<endl;
+                        cout << "\t\tTime of Enter " << DateTime::getDateTimechar() << endl;
+                        cout << "\t\t==============================="<< endl;
+                        cout << "\n";
+
+
+                        /*
+                         * check for condition
+                         * Elevator current Floor is ==  Passenger Dest floor
+                         * if yes
+                         * then
+                         * pop from the  queue
+                         * and decrement the counter
+                         * and update the time
+                         * and print out the time elapsed
+                         *
+                         */
+
+                    }
+
+                    if (elevators[j]->elevatorCurrentFloor == x->DestinationFloor)
+                    {
+
+                        /*
+                         * then pop the person
+                         * update the Dest floor
+                         * update the elapsed time
+                         */
+
+                        // Store that into a pointer
+                        Passenger *tem;
+                        tem = elevators[j]->Up.front();
+                        x->GetOffTime =DateTime::getDateTime();
+
+                        elevators[j]->ElevatorWeightCounter = elevators[j]->ElevatorWeightCounter  - x->Weight;
+
+                        cout << "\n";
+                        cout << "\t\t==============================="<< endl;
+                        cout << "\t\t" << "passenger Getting OFF " << endl;
+                        cout << "\t\t" << "Id :" << x->PassengerId << endl;
+                        cout << "\t\tGot in off Floor " << x->DestinationFloor <<  endl;
+                        cout << "\t\tTime of Enter " << DateTime::getDateTimechar() << endl;
+                        cout << "\t\t==============================="<< endl;
+                        cout << "\n";
+
+                    }
+
+                }
+
+            }cout << "\n";
+        }
+    }
+
 }

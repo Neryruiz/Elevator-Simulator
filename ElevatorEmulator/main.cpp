@@ -38,6 +38,7 @@ int main() {
 
     generator->populateElevator();
 
+
     delete generator;
 
 

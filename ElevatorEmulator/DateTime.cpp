@@ -82,17 +82,21 @@ time_t DateTime::getTime()
 
 }
 
-time_t DateTime::getDateTime()
+char DateTime::getDateTimechar()
 {
-//    time_t date = getDate();
-//    time_t time = getTime();
-//    time_t datetime = date+time;
 
     time_t now = time(0);
-    cout << "***" << endl;
+    char* dt = ctime(&now);
+    return *dt;
 
+}
+
+time_t DateTime::getDateTime()
+{
+    time_t now = time(0);
     char* dt = ctime(&now);     // Coverts time_t into Char  Nov 10 15:24:56 2019
 
+    cout << dt << endl;
     return now;
 }
 

@@ -29,7 +29,6 @@ public:
     map<int, vector<std::string>> Data;
     map<int,vector<Passenger *>> Levels;
 
-
     string floor;
     string totalNumberElevator;
     string capacity;
@@ -44,8 +43,6 @@ public:
     vector <Passenger *> PassengerGoingUp;
     vector <Passenger *> PassengerGoingDown;
     vector <Passenger *> PassengerGoingNone;
-
-
 
 public:
     /*
@@ -66,6 +63,11 @@ public:
     void populateElevator();
     void displayFloorStatus();
     void addPassengerToVectors();
+    void passengerIntroduce();
+    void passengerGoingUpSummary();
+    void passengerFoingDownSummary();
+
+
 
 };
 

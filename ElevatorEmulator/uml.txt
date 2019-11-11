@@ -144,14 +144,20 @@ class TrafficGenerator{
     vector<string> supportstaff;
     vector<string> medicalstaff;
     vector<string> securitystaff;
+    vector <Passenger *> PassengerGoingUp;
+    vector <Passenger *> PassengerGoingDown;
+    vector <Passenger *> PassengerGoingNone;
 
-        TrafficGenerator();
+    TrafficGenerator();
     TrafficGenerator(std::string Path);
     ~TrafficGenerator();
 
-    map<int, vector<Passenger *>> generateTraffic();
+    void  generateTraffic();
     void display(std::string name,vector<std::string> type, int count);
     void introducePassenger(int low, int high,Passenger *passenger []);
+    void populateElevator();
+    void displayFloorStatus();
+    void addPassengerToVectors();
 
 }
 
