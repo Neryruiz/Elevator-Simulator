@@ -4,6 +4,7 @@
 CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o: ../Display.cpp
 CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o: ../Display.h
 CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o: ../Passenger.h
+CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o: ../StatisticsKeeper.h
 
 CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../ElevatorDirection.cpp
 CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../ElevatorDirection.h
@@ -24,6 +25,7 @@ CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../RandomGe
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../Security.h
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../SecurityPersonnel.h
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../Staff.h
+CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../StatisticsKeeper.h
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../StringHelper.h
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../SupportStaff.h
 CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o: ../Visitors.h

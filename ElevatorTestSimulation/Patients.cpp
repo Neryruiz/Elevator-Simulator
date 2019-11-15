@@ -20,6 +20,7 @@ Patients::Patients()
     count ++;
     string unique = uniqueId + std::to_string(count);
     PassengerId = unique;
+    name = "Patients";
 }
 
 Patients::~Patients()

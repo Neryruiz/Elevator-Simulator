@@ -13,6 +13,10 @@
 #include "StringHelper.h"
 #include "RandomGenerator.h"
 #include "ElevatorDirection.h"
+#include "StatisticsKeeper.h"
+
+
+
 
 Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>>> &PData, vector<int> &PassengerSpawnRange)
 {

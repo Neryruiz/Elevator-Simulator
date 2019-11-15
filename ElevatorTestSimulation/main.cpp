@@ -18,7 +18,13 @@ int main()
     std::string path = "/Users/soumilshah/CLionProjects/ElevatorTestSimulation/input.txt";
     TrafficGenerator *generate;
     generate = new TrafficGenerator(path);
-    generate->generatePassengers();
+
+    for (int i=0; i<4; i++)
+    {
+        generate->generatePassengers();
+    }
+
+    generate->displayPassenger();
 
     return 0;
     }

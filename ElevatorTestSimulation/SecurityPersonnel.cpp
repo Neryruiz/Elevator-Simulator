@@ -19,6 +19,7 @@ SecurityPersonnel::SecurityPersonnel()
     count++;
     string unique = uniqueId + std::to_string(count);
     PassengerId = unique;
+    name = "SecurityPersonnel";
 }
 
 SecurityPersonnel::~SecurityPersonnel()

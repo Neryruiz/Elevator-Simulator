@@ -18,6 +18,12 @@ public:
 public:
     static int totalPassengerCreatedInBatchSize;
 
+    static int visitorCounter;
+    static int medicalStaffCounter;
+    static int securityStaffCounter;
+    static  int patientCounter;
+    static int supportStaffCounter;
+
 };
 
 

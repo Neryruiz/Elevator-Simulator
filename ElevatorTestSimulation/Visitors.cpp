@@ -24,7 +24,7 @@ Visitors::Visitors()
     string uniqueId =  "V";
     string unique = uniqueId + std::to_string(count);
     PassengerId = unique;
-
+    name = "Visitors";
 }
 
 

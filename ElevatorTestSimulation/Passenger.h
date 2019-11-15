@@ -27,6 +27,7 @@ public:
     int CurrentFloor;
     int DestinationFloor;
     char DirectionPassenger;
+    std::string name;
 
     std::time_t CreationRTime;
     time_t GetTime;

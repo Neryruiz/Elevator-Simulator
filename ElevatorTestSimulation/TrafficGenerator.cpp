@@ -38,10 +38,14 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
 
 }
 
-TrafficGenerator::~TrafficGenerator()
-{
+TrafficGenerator::~TrafficGenerator(){}
 
+void TrafficGenerator::displayPassenger()
+{
+    Display::introducePassenger(Levels);
+    Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
 }
+
 
 void TrafficGenerator::generatePassengers()
 {
@@ -61,13 +65,12 @@ void TrafficGenerator::generatePassengers()
             {
                 cout << "Some thing strange occured" << endl;
             }
-
         }
     }
-    // This is where populating Passenger is complete
-    Display::introducePassenger(Levels);
-    Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
+
 }
+
+
 
 vector<int> TrafficGenerator::setSpawnRange(vector<float> &Rates)
 {

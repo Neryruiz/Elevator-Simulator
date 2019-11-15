@@ -4,6 +4,8 @@
 
 #include "Passenger.h"
 #include "Display.h"
+#include "StatisticsKeeper.h"
+
 
 void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
 {
@@ -14,10 +16,35 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
     cout << "\n";
 
     // LEVEL DATA STRUCTURE
-    for(int j = 0; j< Levels.size(); j++){
+    for(int j = 0; j< Levels.size(); j++)
+    {
         for(auto x:Levels[j])
         {
             x->introduce();
+
+            if(x->name == "SupportStaff")
+            {
+                StatisticsKeeper::supportStaffCounter = StatisticsKeeper::supportStaffCounter + 1;
+            }
+            if( x->name == "Visitor" )
+            {
+                StatisticsKeeper::visitorCounter = StatisticsKeeper::visitorCounter + 1;
+            }
+            if(x->name == "MedicalStaff")
+            {
+                StatisticsKeeper::medicalStaffCounter = StatisticsKeeper::medicalStaffCounter + 1;
+            }
+
+            if(x->name == "Patients")
+            {
+                StatisticsKeeper::patientCounter = StatisticsKeeper::patientCounter + 1;
+            }
+
+            if(x->name == "SecurityPersonnel")
+            {
+                StatisticsKeeper::securityStaffCounter = StatisticsKeeper::securityStaffCounter + 1;
+            }
+
         }
     }
 
@@ -30,6 +57,12 @@ void Display::displayTotalPassengerCount(int num)
     cout << "\n";
     cout << "\t\t==============================================="<< endl;
     cout << "\t\t\t\t\t" << "Total Passenger Generated  "<< num  << endl;
+
+    cout << "\t\t\t\t\t" << "Total Visitors  "<< StatisticsKeeper::visitorCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Patients  "<< StatisticsKeeper::patientCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Security personal  "<< StatisticsKeeper::securityStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Support Staff  "<< StatisticsKeeper::supportStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Medical Staff  "<< StatisticsKeeper::medicalStaffCounter  << endl;
     cout << "\t\t==============================================="<< endl;
     cout << "\n";
 
