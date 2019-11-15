@@ -74,6 +74,11 @@ CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/Staff.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SupportStaff.cpp
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SupportStaff.h
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o
+ /Users/soumilshah/CLionProjects/ElevatorTestSimulation/Passenger.h
+ /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SystemController.cpp
+ /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SystemController.h
+ /Users/soumilshah/CLionProjects/ElevatorTestSimulation/TrafficGenerator.h
 CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/Display.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/FileRead.h
@@ -107,6 +112,7 @@ CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SecurityPersonnel.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/Staff.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SupportStaff.h
+ /Users/soumilshah/CLionProjects/ElevatorTestSimulation/SystemController.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/TrafficGenerator.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/Visitors.h
  /Users/soumilshah/CLionProjects/ElevatorTestSimulation/main.cpp

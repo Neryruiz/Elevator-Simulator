@@ -528,6 +528,33 @@ SupportStaff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.s
 .PHONY : SupportStaff.cpp.s
 
+SystemController.o: SystemController.cpp.o
+
+.PHONY : SystemController.o
+
+# target to build an object file
+SystemController.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o
+.PHONY : SystemController.cpp.o
+
+SystemController.i: SystemController.cpp.i
+
+.PHONY : SystemController.i
+
+# target to preprocess a source file
+SystemController.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.i
+.PHONY : SystemController.cpp.i
+
+SystemController.s: SystemController.cpp.s
+
+.PHONY : SystemController.s
+
+# target to generate assembly for a file
+SystemController.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.s
+.PHONY : SystemController.cpp.s
+
 TrafficGenerator.o: TrafficGenerator.cpp.o
 
 .PHONY : TrafficGenerator.o
@@ -663,6 +690,9 @@ help:
 	@echo "... SupportStaff.o"
 	@echo "... SupportStaff.i"
 	@echo "... SupportStaff.s"
+	@echo "... SystemController.o"
+	@echo "... SystemController.i"
+	@echo "... SystemController.s"
 	@echo "... TrafficGenerator.o"
 	@echo "... TrafficGenerator.i"
 	@echo "... TrafficGenerator.s"

@@ -170,6 +170,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/SupportStaff.h">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/SystemController.cpp">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/SystemController.h">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/TrafficGenerator.cpp">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>

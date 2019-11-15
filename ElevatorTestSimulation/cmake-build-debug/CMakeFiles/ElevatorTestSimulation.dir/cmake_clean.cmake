@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ElevatorTestSimulation.dir/StatisticsKeeper.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/StringHelper.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o"
+  "CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/Visitors.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o"

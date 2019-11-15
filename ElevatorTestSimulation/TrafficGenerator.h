@@ -26,12 +26,19 @@ public:
     map<int,vector<Passenger *>> Levels;
 
 public:
+    /*
+     * Methods
+     */
 
     void generatePassengers();
     vector<int> setSpawnRange(vector<float> &Rates);
     void displayPassenger();
+    void startElevator();
 
 public:
+    /*
+     * Constructor and Destructor
+     */
     TrafficGenerator(std::string path);
     ~TrafficGenerator();
 

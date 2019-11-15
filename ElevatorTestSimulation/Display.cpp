@@ -34,17 +34,23 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
             {
                 StatisticsKeeper::medicalStaffCounter = StatisticsKeeper::medicalStaffCounter + 1;
             }
-
             if(x->name == "Patients")
             {
                 StatisticsKeeper::patientCounter = StatisticsKeeper::patientCounter + 1;
             }
-
             if(x->name == "SecurityPersonnel")
             {
                 StatisticsKeeper::securityStaffCounter = StatisticsKeeper::securityStaffCounter + 1;
             }
 
+            if (x->DirectionPassenger == 'U')       // Up Passengers Tracker
+            {
+                StatisticsKeeper::totalPassengerGoingUp = StatisticsKeeper::totalPassengerGoingUp + 1;
+            }
+            if(x->DirectionPassenger == 'D')        // Up Passengers Tracker
+            {
+                StatisticsKeeper::totalPassengerGoingDown = StatisticsKeeper::totalPassengerGoingDown + 1;
+            }
         }
     }
 
@@ -57,12 +63,13 @@ void Display::displayTotalPassengerCount(int num)
     cout << "\n";
     cout << "\t\t==============================================="<< endl;
     cout << "\t\t\t\t\t" << "Total Passenger Generated  "<< num  << endl;
-
     cout << "\t\t\t\t\t" << "Total Visitors  "<< StatisticsKeeper::visitorCounter  << endl;
     cout << "\t\t\t\t\t" << "Total Patients  "<< StatisticsKeeper::patientCounter  << endl;
     cout << "\t\t\t\t\t" << "Total Security personal  "<< StatisticsKeeper::securityStaffCounter  << endl;
     cout << "\t\t\t\t\t" << "Total Support Staff  "<< StatisticsKeeper::supportStaffCounter  << endl;
     cout << "\t\t\t\t\t" << "Total Medical Staff  "<< StatisticsKeeper::medicalStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Passenger Going Up "<< StatisticsKeeper::totalPassengerGoingUp  << endl;
+    cout << "\t\t\t\t\t" << "Total Passenger Going Down "<< StatisticsKeeper::totalPassengerGoingDown  << endl;
     cout << "\t\t==============================================="<< endl;
     cout << "\n";
 

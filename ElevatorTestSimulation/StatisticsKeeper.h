@@ -24,6 +24,9 @@ public:
     static  int patientCounter;
     static int supportStaffCounter;
 
+    static int totalPassengerGoingUp ;
+    static int totalPassengerGoingDown;
+
 };
 
 

@@ -12,7 +12,9 @@ int StatisticsKeeper::securityStaffCounter=0;
 int StatisticsKeeper::patientCounter = 0;
 int StatisticsKeeper::supportStaffCounter = 0;
 
+int StatisticsKeeper::totalPassengerGoingUp = 0;
 
+int StatisticsKeeper::totalPassengerGoingDown = 0;
 
 StatisticsKeeper::StatisticsKeeper()
 {

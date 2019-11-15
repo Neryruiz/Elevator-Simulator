@@ -71,6 +71,15 @@ void TrafficGenerator::generatePassengers()
 }
 
 
+void TrafficGenerator::startElevator()
+{
+    /*
+     * Code for Elevator Controller Systems
+     */
+
+
+}
+
 
 vector<int> TrafficGenerator::setSpawnRange(vector<float> &Rates)
 {

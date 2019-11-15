@@ -74,6 +74,11 @@ CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../Staff.h
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.cpp
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.h
 
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Passenger.h
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../SystemController.cpp
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../SystemController.h
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../TrafficGenerator.h
+
 CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o: ../Display.h
 CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o: ../FileRead.h
 CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o: ../GenerateUniquePassenger.h
@@ -106,6 +111,7 @@ CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../Security.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../SecurityPersonnel.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../Staff.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../SupportStaff.h
+CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../SystemController.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../TrafficGenerator.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../Visitors.h
 CMakeFiles/ElevatorTestSimulation.dir/main.cpp.o: ../main.cpp
