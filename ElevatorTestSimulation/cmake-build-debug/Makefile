@@ -123,6 +123,33 @@ ElevatorTestSimulation/fast:
 	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/build
 .PHONY : ElevatorTestSimulation/fast
 
+Display.o: Display.cpp.o
+
+.PHONY : Display.o
+
+# target to build an object file
+Display.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o
+.PHONY : Display.cpp.o
+
+Display.i: Display.cpp.i
+
+.PHONY : Display.i
+
+# target to preprocess a source file
+Display.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.i
+.PHONY : Display.cpp.i
+
+Display.s: Display.cpp.s
+
+.PHONY : Display.s
+
+# target to generate assembly for a file
+Display.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.s
+.PHONY : Display.cpp.s
+
 ElevatorDirection.o: ElevatorDirection.cpp.o
 
 .PHONY : ElevatorDirection.o
@@ -420,6 +447,33 @@ Staff.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Staff.cpp.s
 .PHONY : Staff.cpp.s
 
+StatisticsKeeper.o: StatisticsKeeper.cpp.o
+
+.PHONY : StatisticsKeeper.o
+
+# target to build an object file
+StatisticsKeeper.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/StatisticsKeeper.cpp.o
+.PHONY : StatisticsKeeper.cpp.o
+
+StatisticsKeeper.i: StatisticsKeeper.cpp.i
+
+.PHONY : StatisticsKeeper.i
+
+# target to preprocess a source file
+StatisticsKeeper.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/StatisticsKeeper.cpp.i
+.PHONY : StatisticsKeeper.cpp.i
+
+StatisticsKeeper.s: StatisticsKeeper.cpp.s
+
+.PHONY : StatisticsKeeper.s
+
+# target to generate assembly for a file
+StatisticsKeeper.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/StatisticsKeeper.cpp.s
+.PHONY : StatisticsKeeper.cpp.s
+
 StringHelper.o: StringHelper.cpp.o
 
 .PHONY : StringHelper.o
@@ -564,6 +618,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ElevatorTestSimulation"
+	@echo "... Display.o"
+	@echo "... Display.i"
+	@echo "... Display.s"
 	@echo "... ElevatorDirection.o"
 	@echo "... ElevatorDirection.i"
 	@echo "... ElevatorDirection.s"
@@ -597,6 +654,9 @@ help:
 	@echo "... Staff.o"
 	@echo "... Staff.i"
 	@echo "... Staff.s"
+	@echo "... StatisticsKeeper.o"
+	@echo "... StatisticsKeeper.i"
+	@echo "... StatisticsKeeper.s"
 	@echo "... StringHelper.o"
 	@echo "... StringHelper.i"
 	@echo "... StringHelper.s"

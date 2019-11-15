@@ -16,6 +16,8 @@
 #include "RandomGenerator.h"
 #include "StringHelper.h"
 #include "GenerateUniquePassenger.h"
+#include "Display.h"
+#include "StatisticsKeeper.h"
 
 
 TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
@@ -44,33 +46,27 @@ TrafficGenerator::~TrafficGenerator()
 void TrafficGenerator::generatePassengers()
 {
     batchSize = RandomGenerator::generateRandomNumber(0,StringHelper::string_to_int(PData[0][0][0]));
-
     if(batchSize !=0)
     {
         Passenger * passenger[batchSize];
-
-        for (int i=0; i<batchSize; i++)
+        for (int i=0; i<batchSize; i++)     // Batch Size is 10
         {
+            try {
+                passenger[i] = GenerateUniquePassenger::genpass(PData, PassengerSpawnRange);
+                Levels[passenger[i]->CurrentFloor].push_back(passenger[i]);             // Then Populates Levels
+                StatisticsKeeper::totalPassengerCreatedInBatchSize = StatisticsKeeper::totalPassengerCreatedInBatchSize + 1;
 
-            passenger[i] = GenerateUniquePassenger::genpass(PData, PassengerSpawnRange);
-            Levels[passenger[i]->CurrentFloor].push_back(passenger[i]);
-            // Then Populates Levels
-        }
-
-        // LEVEL DATA STRUCTURE
-        for(int j = 0; j<=8;j++){
-
-            for(auto x:Levels[j])
+                }
+            catch (int e)
             {
-                x->introduce();
+                cout << "Some thing strange occured" << endl;
             }
+
         }
-
-
-
-
     }
-
+    // This is where populating Passenger is complete
+    Display::introducePassenger(Levels);
+    Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
 }
 
 vector<int> TrafficGenerator::setSpawnRange(vector<float> &Rates)

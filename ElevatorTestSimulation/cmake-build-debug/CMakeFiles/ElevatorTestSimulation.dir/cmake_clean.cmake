@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o"
@@ -10,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ElevatorTestSimulation.dir/Security.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/SecurityPersonnel.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/Staff.cpp.o"
+  "CMakeFiles/ElevatorTestSimulation.dir/StatisticsKeeper.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/StringHelper.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/TrafficGenerator.cpp.o"

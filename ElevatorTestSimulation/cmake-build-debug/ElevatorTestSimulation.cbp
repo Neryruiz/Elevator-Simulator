@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/Display.cpp">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/Display.h">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/ElevatorDirection.cpp">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
@@ -144,6 +150,12 @@
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/Staff.h">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/StatisticsKeeper.cpp">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/StatisticsKeeper.h">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/StringHelper.cpp">

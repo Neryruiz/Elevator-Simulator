@@ -25,7 +25,6 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
 
     Passenger *p;
 
-
     int d = RandomGenerator::generateRandomNumber(0,floor);
     int c = RandomGenerator::generateRandomNumber(0,floor);
 
@@ -34,6 +33,7 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
     {
         int d = RandomGenerator::generateRandomNumber(0,floor);
         int c = RandomGenerator::generateRandomNumber(0,floor);
+        break;
     }
 
 
@@ -41,43 +41,48 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
     map<int , Passenger*> GenerateUniquePass;
     GenerateUniquePass.insert(pair<int , Passenger* >(1, new Visitors));
 
-    // Iterate over PData for names
-    for (int i=1; i<PData.size(); i++)
+
+    if(PData.size() > 0)
     {
-        name = PData[i][0][0];
+        // Iterate over PData for names
+        for (int i=1; i<PData.size(); i++)
+        {
+            name = PData[i][0][0];
 
-        if (name == "Visitor")     // 1
-        {
-            GenerateUniquePass.insert(pair<int , Passenger* >(i, new Visitors));
-        }
-        else if(name == "Patient")
-        {
-            GenerateUniquePass.insert(pair<int , Passenger* >(i, new Patients));
-        }
+            if (name == "Visitor")     // 1
+            {
+                GenerateUniquePass.insert(pair<int , Passenger* >(i, new Visitors));
+            }
+            else if(name == "Patient")
+            {
+                GenerateUniquePass.insert(pair<int , Passenger* >(i, new Patients));
+            }
 
-        else if(name == "Support")
-        {
-            GenerateUniquePass.insert(pair<int , Passenger* >(i, new SupportStaff));
-        }
+            else if(name == "Support")
+            {
+                GenerateUniquePass.insert(pair<int , Passenger* >(i, new SupportStaff));
+            }
 
-        else if(name == "Medical")
-        {
-            GenerateUniquePass.insert(pair<int , Passenger* >(i, new MedicalStaff));
-        }
+            else if(name == "Medical")
+            {
+                GenerateUniquePass.insert(pair<int , Passenger* >(i, new MedicalStaff));
+            }
 
-        else if(name == "Security")
-        {
-            GenerateUniquePass.insert(pair<int , Passenger* >(i, new SecurityPersonnel));
-        }
-        else
+            else if(name == "Security")
+            {
+                GenerateUniquePass.insert(pair<int , Passenger* >(i, new SecurityPersonnel));
+            }
+            else
             {
 
-             /*
-             * Prompt useer if he wants to create a new user
-             */
+                /*
+                * Prompt useer if he wants to create a new user
+                */
                 cout<< "name"<< name <<endl;
                 cout << "Pleas enter object in input file " << endl;
             }
+    }
+
 
     }
 
