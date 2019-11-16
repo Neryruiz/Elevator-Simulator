@@ -25,6 +25,8 @@ public:
      */
 
     void generateTraffic(int epoch);
+    void startElevator();
+
 
 public:
     /*
@@ -35,6 +37,8 @@ public:
     map<int,vector<Passenger *>> Levels;
     std::string path;
     int epoch;
+    int numberElevator;
+    int maxCapacity;
 
 };
 

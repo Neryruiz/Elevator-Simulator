@@ -177,6 +177,33 @@ ElevatorDirection.cpp.s:
 	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.s
 .PHONY : ElevatorDirection.cpp.s
 
+Elevators.o: Elevators.cpp.o
+
+.PHONY : Elevators.o
+
+# target to build an object file
+Elevators.cpp.o:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o
+.PHONY : Elevators.cpp.o
+
+Elevators.i: Elevators.cpp.i
+
+.PHONY : Elevators.i
+
+# target to preprocess a source file
+Elevators.cpp.i:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.i
+.PHONY : Elevators.cpp.i
+
+Elevators.s: Elevators.cpp.s
+
+.PHONY : Elevators.s
+
+# target to generate assembly for a file
+Elevators.cpp.s:
+	$(MAKE) -f CMakeFiles/ElevatorTestSimulation.dir/build.make CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.s
+.PHONY : Elevators.cpp.s
+
 FileRead.o: FileRead.cpp.o
 
 .PHONY : FileRead.o
@@ -651,6 +678,9 @@ help:
 	@echo "... ElevatorDirection.o"
 	@echo "... ElevatorDirection.i"
 	@echo "... ElevatorDirection.s"
+	@echo "... Elevators.o"
+	@echo "... Elevators.i"
+	@echo "... Elevators.s"
 	@echo "... FileRead.o"
 	@echo "... FileRead.i"
 	@echo "... FileRead.s"

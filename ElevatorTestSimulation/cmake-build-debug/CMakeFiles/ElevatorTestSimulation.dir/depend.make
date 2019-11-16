@@ -10,6 +10,9 @@ CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../ElevatorDirect
 CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../ElevatorDirection.h
 CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../StringHelper.h
 
+CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o: ../Elevators.cpp
+CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o: ../Elevators.h
+
 CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o: ../FileRead.cpp
 CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o: ../FileRead.h
 CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o: ../StringHelper.h
@@ -74,7 +77,9 @@ CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../Staff.h
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.cpp
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.h
 
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Elevators.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Passenger.h
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../StringHelper.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../SystemController.cpp
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../SystemController.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../TrafficGenerator.h

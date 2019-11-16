@@ -23,6 +23,7 @@ int main()
     SystemController *systemcontroller;
     systemcontroller = new SystemController(path , epoch);
 
-    
+    systemcontroller->startElevator();
+
     return 0;
     }

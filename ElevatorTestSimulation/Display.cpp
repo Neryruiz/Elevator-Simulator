@@ -52,6 +52,25 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
                 StatisticsKeeper::totalPassengerGoingDown = StatisticsKeeper::totalPassengerGoingDown + 1;
             }
         }
+
+    }
+
+    cout << "\n";
+    cout << "\t\t==============================================="<< endl;
+    cout << "\t\t\t\t\t" << "Floor Summary   " << endl;
+    cout << "\t\t==============================================="<< endl;
+    cout << "\n";
+
+    // LEVEL DATA STRUCTURE
+    for(int j = 0; j< Levels.size(); j++)
+    {
+        cout << "Floor : " << j << "  Passenger : " ;
+
+        for (auto x: Levels[j])
+        {
+            cout << x->PassengerId << " " << x->DirectionPassenger << " ";
+        }cout << "\n";
+
     }
 
     // For a given Batch Keeps count of Total Passengers

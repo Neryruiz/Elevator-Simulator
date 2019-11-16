@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ElevatorTestSimulation.dir/Display.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o"
+  "CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/GenerateUniquePassenger.cpp.o"
   "CMakeFiles/ElevatorTestSimulation.dir/MedicalStaff.cpp.o"

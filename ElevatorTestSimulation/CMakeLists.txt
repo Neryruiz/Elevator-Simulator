@@ -11,4 +11,4 @@ add_executable(ElevatorTestSimulation main.cpp
         Patients.h People.cpp People.h StringHelper.cpp
         StringHelper.h RandomGenerator.cpp RandomGenerator.h
         FileRead.cpp FileRead.h TrafficGenerator.cpp TrafficGenerator.h
-        GenerateUniquePassenger.cpp GenerateUniquePassenger.h ElevatorDirection.cpp ElevatorDirection.h Display.cpp Display.h StatisticsKeeper.cpp StatisticsKeeper.h SystemController.cpp SystemController.h)
+        GenerateUniquePassenger.cpp GenerateUniquePassenger.h ElevatorDirection.cpp ElevatorDirection.h Display.cpp Display.h StatisticsKeeper.cpp StatisticsKeeper.h SystemController.cpp SystemController.h Elevators.cpp Elevators.h)

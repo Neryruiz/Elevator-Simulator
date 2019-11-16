@@ -92,6 +92,12 @@
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/ElevatorDirection.h">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/Elevators.cpp">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/Elevators.h">
+			<Option target="ElevatorTestSimulation"/>
+		</Unit>
 		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorTestSimulation/FileRead.cpp">
 			<Option target="ElevatorTestSimulation"/>
 		</Unit>
