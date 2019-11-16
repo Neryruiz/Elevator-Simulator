@@ -24,6 +24,7 @@ public:
     vector<int>PassengerSpawnRange;
     map<int, vector<vector<std::string>>> PData;
     map<int,vector<Passenger *>> Levels;
+    vector<Passenger *> Tem;
 
 public:
     /*

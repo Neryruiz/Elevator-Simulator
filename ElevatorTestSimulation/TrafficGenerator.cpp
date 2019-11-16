@@ -18,6 +18,7 @@
 #include "GenerateUniquePassenger.h"
 #include "Display.h"
 #include "StatisticsKeeper.h"
+#include "Passenger.h"
 
 
 TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
@@ -35,6 +36,13 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
     }
 
     PassengerSpawnRange = setSpawnRange(Rates);
+
+    for (int i=0; i <= StringHelper::string_to_int(PData[0][0][0]) ;i++ )
+    {
+        Levels[i] = Tem;
+        cout << "==" << endl;
+    }
+
 
 }
 

@@ -35,15 +35,18 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
 
     while(c == d)
     {
-        int d = RandomGenerator::generateRandomNumber(0,floor);
-        int c = RandomGenerator::generateRandomNumber(0,floor);
-        break;
+        if(c == d)
+        {
+             d = RandomGenerator::generateRandomNumber(0,floor);
+            // int c = RandomGenerator::generateRandomNumber(0,floor);
+            break;
+        }
     }
 
 
     std::string name;
     map<int , Passenger*> GenerateUniquePass;
-    GenerateUniquePass.insert(pair<int , Passenger* >(1, new Visitors));
+    // GenerateUniquePass.insert(pair<int , Passenger* >(1, new Visitors));
 
 
     if(PData.size() > 0)
@@ -78,7 +81,6 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
             }
             else
             {
-
                 /*
                 * Prompt useer if he wants to create a new user
                 */
@@ -86,14 +88,21 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
                 cout << "Pleas enter object in input file " << endl;
             }
     }
-
-
     }
 
     // Data structure is created
 
     // Gives Passenger Pointer
-    int tmpType =PassengerSpawnRange[PassengerIndex];
+    int tmpType = PassengerSpawnRange[PassengerIndex];
+    if (tmpType >0)
+    {
+
+    }
+    if(tmpType == 0)                // Quick Fix for Crash
+    {
+        tmpType = tmpType + 1;      // SomeTime it was generating 0
+    }
+
     Passenger *tm = GenerateUniquePass[tmpType];
     tm->DestinationFloor = d;
     tm->CurrentFloor = c;

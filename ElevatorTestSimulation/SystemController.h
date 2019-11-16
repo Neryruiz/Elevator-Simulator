@@ -35,6 +35,7 @@ public:
 
     map<int, vector<vector<std::string>>> PData;
     map<int,vector<Passenger *>> Levels;
+    map<int,vector<Passenger *>> LevelsCopy;
     std::string path;
     int epoch;
     int numberElevator;

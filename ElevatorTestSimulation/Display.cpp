@@ -68,7 +68,7 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
 
         for (auto x: Levels[j])
         {
-            cout << x->PassengerId << " " << x->DirectionPassenger << " ";
+            cout << x->PassengerId << " " << x->DirectionPassenger << " " << " W: " << x->Weight << " "  ;
         }cout << "\n";
 
     }

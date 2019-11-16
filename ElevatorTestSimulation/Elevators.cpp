@@ -8,12 +8,13 @@ using  namespace std;
 int Elevators::count=0;
 
 
-Elevators::Elevators()
+Elevators::Elevators():elevatorWeightCounter{0}
 {
     string uniqueId =  "ELEV";
     string unique = uniqueId + std::to_string(count);
     ElevatorId = unique;
     count = count + 1;
+
 }
 Elevators::~Elevators()
 {

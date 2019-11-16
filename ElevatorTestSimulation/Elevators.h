@@ -1,6 +1,9 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <queue>
+#include <deque>
+
 
 using namespace std;
 
@@ -8,6 +11,7 @@ using namespace std;
 #ifndef ELEVATORTESTSIMULATION_ELEVATORS_H
 #define ELEVATORTESTSIMULATION_ELEVATORS_H
 
+#include "Passenger.h"
 
 class Elevators {
 
@@ -31,13 +35,18 @@ public:
     /*
      * Attributes
      */
-    int maxCapacity;
-    char elevatorDirection;
-    int currentFloor;
-    int lowestFlooor;
-    int higestFloor;
-    int static  count;
-    string ElevatorId;
+    int maxCapacity;            // Max capacity
+    char elevatorDirection;     // Direction of Elevator
+    int currentFloor;           // Floor where Elevator is
+    int lowestFlooor;           // Lowest Floor it can go is
+    int higestFloor;            // Higest Floor it can Go
+
+    int static  count;          // Elevator ID
+    string ElevatorId;          // Elevator ID
+    int elevatorWeightCounter;
+
+    deque <Passenger *> Up;
+    deque <Passenger *> Down;
 
 };
 

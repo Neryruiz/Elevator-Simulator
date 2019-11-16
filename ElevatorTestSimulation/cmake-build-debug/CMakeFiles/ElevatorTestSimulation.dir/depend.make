@@ -12,6 +12,7 @@ CMakeFiles/ElevatorTestSimulation.dir/ElevatorDirection.cpp.o: ../StringHelper.h
 
 CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o: ../Elevators.cpp
 CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o: ../Elevators.h
+CMakeFiles/ElevatorTestSimulation.dir/Elevators.cpp.o: ../Passenger.h
 
 CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o: ../FileRead.cpp
 CMakeFiles/ElevatorTestSimulation.dir/FileRead.cpp.o: ../FileRead.h
