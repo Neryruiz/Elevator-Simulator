@@ -85,7 +85,7 @@ void SystemController::startElevator()
                     << " Dest: \t" <<  u->DestinationFloor << endl;
 
                     // Passenger should be deleted once served
-                    delete u;
+
 
                 }
             }
