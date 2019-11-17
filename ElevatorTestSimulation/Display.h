@@ -18,6 +18,7 @@ public:
     static int TotalPassengerCreated;       // Counts How Many Passenger created for BatchSize
     static void introducePassenger(map<int,vector<Passenger *>> Levels);
     static  void displayTotalPassengerCount(int num);
+    static void displayDestinationFloors( map<int , vector<Passenger *>> LevelDest);
 
 };
 

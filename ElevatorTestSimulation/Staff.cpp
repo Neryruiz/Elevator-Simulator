@@ -12,10 +12,10 @@
 
 Staff::~Staff()
 {
-    cout << "Staff Destructor ----->" << endl;
+    // cout << "Staff Destructor ----->" << endl;
 }
 
 void Staff::emergency()
 {
-    cout << "Staff emergency  method " << endl;
+   //  cout << "Staff emergency  method " << endl;
 }

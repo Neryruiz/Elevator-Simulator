@@ -29,20 +29,16 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
     PData = reader->PData;
 
     vector<float>Rates;     // [0.15 0.25 0.3 0.2 0.1 ]
-
     for (int i=1; i <PData.size(); i++)
     {
         Rates.push_back(StringHelper::string_to_float(PData[i][0].back()));
     }
 
     PassengerSpawnRange = setSpawnRange(Rates);
-
     for (int i=0; i <= StringHelper::string_to_int(PData[0][0][0]) ;i++ )
     {
         Levels[i] = Tem;
-        cout << "==" << endl;
     }
-
 
 }
 
@@ -51,6 +47,7 @@ TrafficGenerator::~TrafficGenerator(){}
 void TrafficGenerator::displayPassenger()
 {
     Display::introducePassenger(Levels);
+
     Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
 }
 

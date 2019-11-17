@@ -93,3 +93,28 @@ void Display::displayTotalPassengerCount(int num)
     cout << "\n";
 
 }
+
+
+
+void Display::displayDestinationFloors( map<int , vector<Passenger *>> LevelDest)
+{
+    cout << "\n";
+    cout << "\t\t==============================================="<< endl;
+    cout << "\t\t\t\t\t" << "Dest levels   " << endl;
+    cout << "\t\t==============================================="<< endl;
+    cout << "\n";
+
+
+    // LEVEL DATA STRUCTURE
+    for(int j = 0; j< LevelDest.size(); j++)
+    {
+        cout << "Floor : " << j << "  Passenger : " ;
+
+        for (auto x: LevelDest[j])
+        {
+            cout << x->PassengerId << " " << x->DirectionPassenger << " " << " W: " << x->Weight << " "  ;
+        }cout << "\n";
+
+    }cout << "\n";
+
+}

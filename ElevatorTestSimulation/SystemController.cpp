@@ -9,7 +9,7 @@ using  namespace std;
 #include "TrafficGenerator.h"
 #include "StringHelper.h"
 #include "Elevators.h"
-
+#include "Display.h"
 
 void SystemController::startElevator()
 {
@@ -24,6 +24,23 @@ void SystemController::startElevator()
      * Set the low and high Floor
      *
      */
+
+
+    // Reverse Map
+    map<int , vector<Passenger *>> LevelDest;
+
+    for (int i=0; i<Levels.size(); i++)
+    {
+        for(auto x: Levels[i])
+        {
+            LevelDest[x->DestinationFloor].push_back(x);
+        }
+
+    }
+
+    Display::displayDestinationFloors(LevelDest);
+    DestFloors = LevelDest;
+
 
     Elevators *elevator[numberElevator];
 
@@ -44,13 +61,13 @@ void SystemController::startElevator()
     // numberElevator
     for(int i=0;i<1; i++)
     {
-        cout << "Id" << elevator[i]->ElevatorId << endl;
+        cout << "Id: \t" << elevator[i]->ElevatorId << endl;
 
         // Each Floor
         for(int j=0;j<Levels.size(); j++){
 
             elevator[i]->currentFloor = j;
-            cout << "\tFloor : " << j << endl;
+            cout << "Floor :\t" << j << endl;
 
             for (auto u:Levels.at(j)){
                 int temWeiht = elevator[i]->elevatorWeightCounter + u->Weight ;
@@ -63,27 +80,32 @@ void SystemController::startElevator()
                     // Passenger Boarded
                     elevator[i]->Up.push_back(u);
 
-                    cout << "\t\t\t\t\t\t" << "Door Opens :::::" <<
-                         elevator[i]->ElevatorId << "Passenger Count ::: "<<
-                         elevator[i]->Up.size()<< "Elevator Weight  " << elevator[i]->elevatorWeightCounter << endl;
+                    cout << "\t\t\t\t\t\t" << "Door Opens :\t"
+                    << "Elevator Weight: \t" << elevator[i]->elevatorWeightCounter << "\t" << u->PassengerId
+                    << " Dest: \t" <<  u->DestinationFloor << endl;
 
-                    cout << "Dest F  :::" << u->DestinationFloor << endl;
+                    // Passenger should be deleted once served
+                    delete u;
+
                 }
             }
-            /*
-             * When the Queue is Populated
-             * Iterate over Queue
-             * Pop and Decrement WeightCounter
-             */
 
-            for (int d=0; d<elevator[i]->Up.size(); i++){
-                int destfloor = elevator[i]->Up.at(d)->DestinationFloor ;
-                int currentFloor = j;
-                cout << "Dest ::: "<< destfloor << "Curr::: "<< currentFloor << endl;
+            for(auto d: LevelDest[j]){
+                if(elevator[i]->currentFloor == d->DestinationFloor and d->DirectionPassenger == 'U')
+                {
+                    cout << "\t\t\t\tGetting Out:\t" << d->PassengerId << endl;
+
+
+                }
+
+
             }
+
+
         }cout <<"\n";
     }
     cout << "=========================================================" << endl;
+
     cout << "Levels " << Levels.size() << endl;
 }
 

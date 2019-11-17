@@ -78,6 +78,7 @@ CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../Staff.h
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.cpp
 CMakeFiles/ElevatorTestSimulation.dir/SupportStaff.cpp.o: ../SupportStaff.h
 
+CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Display.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Elevators.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorTestSimulation.dir/SystemController.cpp.o: ../StringHelper.h
