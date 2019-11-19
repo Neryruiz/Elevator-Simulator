@@ -28,10 +28,14 @@ public:
     int DestinationFloor;
     char DirectionPassenger;
     std::string name;
+    char callType;
+
 
     std::time_t CreationRTime;
     time_t GetTime;
     time_t GetOffTime;
+
+
 
 public:
     /*

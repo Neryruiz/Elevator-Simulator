@@ -47,6 +47,7 @@ public:
 
     deque <Passenger *> Up;
     deque <Passenger *> Down;
+    vector <bool> DestFlag ;
 
 };
 

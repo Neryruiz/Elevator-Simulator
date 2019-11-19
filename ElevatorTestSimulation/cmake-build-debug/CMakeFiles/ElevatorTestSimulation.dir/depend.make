@@ -53,6 +53,7 @@ CMakeFiles/ElevatorTestSimulation.dir/People.cpp.o: ../People.h
 
 CMakeFiles/ElevatorTestSimulation.dir/RandomGenerator.cpp.o: ../RandomGenerator.cpp
 CMakeFiles/ElevatorTestSimulation.dir/RandomGenerator.cpp.o: ../RandomGenerator.h
+CMakeFiles/ElevatorTestSimulation.dir/RandomGenerator.cpp.o: ../StringHelper.h
 
 CMakeFiles/ElevatorTestSimulation.dir/Security.cpp.o: ../Passenger.h
 CMakeFiles/ElevatorTestSimulation.dir/Security.cpp.o: ../Security.cpp

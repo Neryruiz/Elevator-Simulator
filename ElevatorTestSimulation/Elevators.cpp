@@ -15,6 +15,12 @@ Elevators::Elevators():elevatorWeightCounter{0}
     ElevatorId = unique;
     count = count + 1;
 
+    // Initialize all  DEST Floor to bool False
+
+    cout << "HIGEST " << higestFloor << endl;
+
+
+
 }
 Elevators::~Elevators()
 {

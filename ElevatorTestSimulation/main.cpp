@@ -20,7 +20,7 @@ int main()
 
 
     std::string path = "/Users/soumilshah/CLionProjects/ElevatorTestSimulation/input.txt";
-    int epoch = 4;
+    int epoch = 1;
 
     SystemController *systemcontroller;
     systemcontroller = new SystemController(path , epoch);

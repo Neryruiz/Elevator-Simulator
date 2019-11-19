@@ -35,6 +35,7 @@ void SecurityPersonnel::introduce()
     cout << "\t\tDestination Floor:\t"<<DestinationFloor<< endl;
     cout << "\t\tWeight :\t"<<Weight<< endl;
     cout << "\t\tI want to go :\t"<<DirectionPassenger<< endl;
+    cout << "\t\tI Call Type :\t"<< callType << endl;
     cout <<"\n";
 }
 

@@ -37,8 +37,15 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
     PassengerSpawnRange = setSpawnRange(Rates);
     for (int i=0; i <= StringHelper::string_to_int(PData[0][0][0]) ;i++ )
     {
+        // vector<Passenger*> * t = new vector<Passenger*>;
         Levels[i] = Tem;
+
+        // Levels.insert(pair<int, vector<Passenger*>(i, t));
     }
+
+    cout << "============================" << endl;
+
+
 
 }
 
