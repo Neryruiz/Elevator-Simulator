@@ -13,7 +13,6 @@ class StringHelper {
 public:
     static int string_to_int(std::string num);
     static float string_to_float(std::string num);
-    static char time_tToChar(time_t t);
 
     //split string based on filter
     static vector<string> string_split_f(stringstream& s, string filter = " ");

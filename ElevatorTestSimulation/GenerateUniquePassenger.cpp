@@ -37,7 +37,7 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
     {
         if(c == d)
         {
-             d = RandomGenerator::generateRandomNumber(0,floor);
+            d = RandomGenerator::generateRandomNumber(0,floor);
             // int c = RandomGenerator::generateRandomNumber(0,floor);
             break;
         }
@@ -87,7 +87,7 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
                 cout<< "name"<< name <<endl;
                 cout << "Pleas enter object in input file " << endl;
             }
-    }
+        }
     }
 
     // Data structure is created
@@ -118,8 +118,8 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
     string destinationFloor = to_string(d);
 
     tm->DirectionPassenger = ElevatorDirection::checkDirection(currentfloor,destinationFloor);
+    tm->callType = RandomGenerator::generatCall(PData[tmpType][1]);
 
-    // tm->callType = RandomGenerator::generatCall(PData[tmpType][1]);
     return tm;
 
 

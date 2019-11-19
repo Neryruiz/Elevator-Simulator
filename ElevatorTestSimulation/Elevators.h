@@ -38,7 +38,7 @@ public:
     int maxCapacity;            // Max capacity
     char elevatorDirection;     // Direction of Elevator
     int currentFloor;           // Floor where Elevator is
-    int lowestFlooor;           // Lowest Floor it can go is
+    int lowestFloor;           // Lowest Floor it can go is
     int higestFloor;            // Higest Floor it can Go
 
     int static  count;          // Elevator ID

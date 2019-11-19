@@ -16,7 +16,7 @@
 
 
 int main()
-    {
+{
 
 
     std::string path = "/Users/soumilshah/CLionProjects/ElevatorTestSimulation/input.txt";
@@ -24,10 +24,7 @@ int main()
 
     SystemController *systemcontroller;
     systemcontroller = new SystemController(path , epoch);
-
     systemcontroller->startElevator();
 
-
-
     return 0;
-    }
+}

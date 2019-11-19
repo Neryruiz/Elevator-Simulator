@@ -14,7 +14,6 @@ int SupportStaff::count = 0;
 
 SupportStaff::SupportStaff()
 {
-    // cout << "Support Staff Constructor " << endl;
 
     string uniqueId =  "SS";
     count++;
@@ -23,11 +22,7 @@ SupportStaff::SupportStaff()
     name = "SupportStaff";
 }
 
-SupportStaff::~SupportStaff()
-{
-    //cout << "Support staff Destructor " << endl;
-    count --;
-}
+SupportStaff::~SupportStaff(){count --;}
 
 
 void SupportStaff::introduce()

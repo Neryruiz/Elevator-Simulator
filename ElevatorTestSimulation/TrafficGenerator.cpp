@@ -23,6 +23,11 @@
 
 TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
 {
+    /*
+     * Constructor
+     */
+
+
     FileRead *reader;
     reader = FileRead::getInstance();
     reader->readFile(path);
@@ -34,18 +39,12 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
         Rates.push_back(StringHelper::string_to_float(PData[i][0].back()));
     }
 
+    // Populate with Empty Passenger Pointer on Each Floor
     PassengerSpawnRange = setSpawnRange(Rates);
     for (int i=0; i <= StringHelper::string_to_int(PData[0][0][0]) ;i++ )
     {
-        // vector<Passenger*> * t = new vector<Passenger*>;
         Levels[i] = Tem;
-
-        // Levels.insert(pair<int, vector<Passenger*>(i, t));
     }
-
-    cout << "============================" << endl;
-
-
 
 }
 
@@ -54,10 +53,9 @@ TrafficGenerator::~TrafficGenerator(){}
 void TrafficGenerator::displayPassenger()
 {
     Display::introducePassenger(Levels);
-
+    Display::displayLevelsCurrent(Levels);
     Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
 }
-
 
 void TrafficGenerator::generatePassengers()
 {
@@ -72,7 +70,7 @@ void TrafficGenerator::generatePassengers()
                 Levels[passenger[i]->CurrentFloor].push_back(passenger[i]);             // Then Populates Levels
                 StatisticsKeeper::totalPassengerCreatedInBatchSize = StatisticsKeeper::totalPassengerCreatedInBatchSize + 1;
 
-                }
+            }
             catch (int e)
             {
                 cout << "Some thing strange occured" << endl;
@@ -81,17 +79,6 @@ void TrafficGenerator::generatePassengers()
     }
 
 }
-
-
-void TrafficGenerator::startElevator()
-{
-    /*
-     * Code for Elevator Controller Systems
-     */
-
-
-}
-
 
 vector<int> TrafficGenerator::setSpawnRange(vector<float> &Rates)
 {

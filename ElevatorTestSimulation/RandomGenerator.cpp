@@ -41,48 +41,23 @@ int RandomGenerator::generateRandomNumber(int low, int high){
 
 char RandomGenerator::generatCall(vector<std::string> &rates)
 {
+    vector<char> Spawnrange;
 
+    for(int i=1;i<rates.size(); i++)
+    {
+        for(int j=0; j<StringHelper::string_to_int(rates.at(i)); j ++)
+        {
+            if(i == 1){Spawnrange.push_back('R');}
 
-    for (auto x: rates){
-        cout << x << endl;
+            if(i == 2){Spawnrange.push_back('P');}
+
+            if(i == 3){Spawnrange.push_back('E');}
+        }
     }
-    cout << "SIZE  "<< rates.size() << endl;
 
+    unsigned  seed = chrono::system_clock::now().time_since_epoch().count();
+    shuffle(Spawnrange.begin(), Spawnrange.end(), default_random_engine(seed));
+    char call  = Spawnrange.at(RandomGenerator::generateRandomNumber(0,99));
 
-//    vector<char> Spawnrange;
-//    cout << "RATES "<< rates.size() << endl;
-//
-//    for(int i =1; i <rates.size(); i++)
-//    {
-//
-//        for(int j=0; j<StringHelper::string_to_int(rates.at(i)); j ++)
-//        {
-//            if(i == 1)
-//            {
-//                Spawnrange.push_back('R');
-//            } else if (i==2)
-//            {
-//                Spawnrange.push_back('P');
-//            } else if (i == 3)
-//            {
-//                Spawnrange.push_back('E');
-//            } else
-//                {
-//                    cout << "Something Went Wrong " << endl;
-//                }
-//
-//        }
-//        unsigned  seed = chrono::system_clock::now().time_since_epoch().count();
-//        shuffle(Spawnrange.begin(), Spawnrange.end(), default_random_engine(seed));
-//
-//        cout << "SIZE" << Spawnrange.size() << endl;
-//
-//
-//        return Spawnrange.at(RandomGenerator::generateRandomNumber(0,99));
-
-    return 'C';
-
-
-
-
+    return call;
 }

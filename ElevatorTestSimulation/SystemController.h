@@ -16,16 +16,15 @@ public:
     /*
      * Constructor and Destructor
      */
-    SystemController(std::string path, int epoch);
-    ~SystemController();
+    SystemController(std::string path, int epoch);      // Populate Traffic in Const
+    ~SystemController();                                // Dest
 
 public:
     /*
      * Methods
      */
 
-    void generateTraffic(int epoch);
-    void startElevator();
+    void startElevator();                   // Creates Elevator object and Starts Lift etc
 
 
 public:
@@ -33,15 +32,15 @@ public:
      * Attributes
      */
 
-    map<int, vector<vector<std::string>>> PData;
-    map<int,vector<Passenger *>> Levels;
-    map<int,vector<Passenger *>> DestFloors;
+    map<int, vector<vector<std::string>>> PData;        // PData DataStructure
+    map<int,vector<Passenger *>> Levels;                // Current Floow Data Structrue
+    map<int , vector<Passenger *>> LevelDest;           // Dest Floor Data Structure
 
-    std::string path;
-    int epoch;
-    int numberElevator;
-    int maxCapacity;
-    int maxFloor;
+    std::string path;                                   // File Path
+    int epoch;                                          // Epoch of Iteration
+    int numberElevator;                                 // Total Number of Elevators
+    int maxCapacity;                                    // max capacity of elevator
+    int maxFloor;                                       // Max Floors
 
 };
 

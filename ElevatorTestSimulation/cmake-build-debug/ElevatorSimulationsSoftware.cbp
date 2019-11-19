@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ElevatorSimulationsSoftware"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ElevatorSimulationsSoftware">
+				<Option output="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/ElevatorSimulationsSoftware" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 ElevatorSimulationsSoftware"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ElevatorSimulationsSoftware/fast">
+				<Option output="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/ElevatorSimulationsSoftware" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 ElevatorSimulationsSoftware/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Display.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Display.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/ElevatorDirection.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/ElevatorDirection.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Elevators.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Elevators.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/FileRead.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/FileRead.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/GenerateUniquePassenger.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/GenerateUniquePassenger.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/MedicalStaff.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/MedicalStaff.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Passenger.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Passenger.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Patients.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Patients.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/People.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/People.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/RandomGenerator.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/RandomGenerator.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Security.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Security.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SecurityPersonnel.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SecurityPersonnel.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Staff.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Staff.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/StatisticsKeeper.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/StatisticsKeeper.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/StringHelper.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/StringHelper.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SupportStaff.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SupportStaff.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SystemController.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/SystemController.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/TrafficGenerator.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/TrafficGenerator.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Visitors.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/Visitors.h">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/main.cpp">
+			<Option target="ElevatorSimulationsSoftware"/>
+		</Unit>
+		<Unit filename="/Users/soumilshah/CLionProjects/ElevatorSimulationsSoftware/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

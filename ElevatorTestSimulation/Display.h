@@ -15,10 +15,11 @@ public:
      * Methods
      */
 
-    static int TotalPassengerCreated;       // Counts How Many Passenger created for BatchSize
-    static void introducePassenger(map<int,vector<Passenger *>> Levels);
-    static  void displayTotalPassengerCount(int num);
-    static void displayDestinationFloors( map<int , vector<Passenger *>> LevelDest);
+    static int TotalPassengerCreated;                                                   // Counts How Many Passenger created for BatchSize
+    static void introducePassenger(map<int,vector<Passenger *>> Levels);                // call introduce method on each Passengres
+    static  void displayTotalPassengerCount(int num);                                   // Display Summary
+    static void displayDestinationFloors( map<int , vector<Passenger *>> &LevelDest);    // Display Dest Levels main
+    static void  displayLevelsCurrent(map<int,vector<Passenger *>> &Levels);
 
 };
 

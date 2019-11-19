@@ -25,11 +25,6 @@ float StringHelper::string_to_float(std::string num)
 }
 
 
-char StringHelper::time_tToChar(time_t t)
-{
-    char* dt = ctime(&t);
-    return *dt;
-}
 
 vector<string> StringHelper::string_split_f(stringstream &target, string filter) {
     vector<string> out;

@@ -52,60 +52,54 @@ void FileRead::readFile(std::string path)
     {
         std::stringstream ss(line);
 
-        if (counter <=3)                            // Logic for reading First Three Line
+        if (counter <=3)                                        // Logic for reading First Three Line
         {
             while  (ss >> result)
             {
-                buldingSetup.push_back(result);     // ['8','4', '12', '10']
+                buldingSetup.push_back(result);                     // ['8','4', '12', '10']
             }
         }
-        else                                        // Rest of Lines
+        else                                                           // Rest of Lines
+        {
+            TemLine = (StringHelper::string_split_f(ss, "CE"));     // ['Visitors 0.15', '100 0 0 ']
+            if(TemLine.size() !=3)
             {
-                TemLine = (StringHelper::string_split_f(ss, "CE"));     // ['Visitors 0.15', '100 0 0 ']
-                if(TemLine.size() !=3)
-                {
-                    TemLine.push_back(" 1 1");             //  ['Visitors 0.15', '100 0 0 ', '1 1']
-//                    stringstream s("  1 1");
-//                    vector<string> tt = StringHelper::string_split_f(s, " ");
-//                    for(auto x:tt){
-//                        cout<< "*" << x << "*" <<endl;
-//                    }
-//                    cout << "--------------------" <<endl;
-                }
-                else
-                    {
+                TemLine.push_back(" 1 1");                          //  ['Visitors 0.15', '100 0 0 ', '1 1']
+            }
+            else
+            {
 
-                    }
+            }
 
-                stringstream tem_rate(TemLine.at(0));
-                Rate = StringHelper::string_split_f(tem_rate, " ");             // ['Visitors', '0.15']
+            stringstream tem_rate(TemLine.at(0));
+            Rate = StringHelper::string_split_f(tem_rate, " ");             // ['Visitors', '0.15']
 
-                stringstream tem_call(TemLine.at(1));
-                Call = StringHelper::string_split_f(tem_call, " ");             // ['100', '0', '0']
+            stringstream tem_call(TemLine.at(1));
+            Call = StringHelper::string_split_f(tem_call, " ");             // ['100', '0', '0']
 
-                stringstream tem_weight(TemLine.at(2));
-                Weight = StringHelper::string_split_f(tem_weight, " ");         // ['1', '1']
+            stringstream tem_weight(TemLine.at(2));
+            Weight = StringHelper::string_split_f(tem_weight, " ");         // ['1', '1']
 
-                PData[PassengerCounter].push_back(Rate);
-                PData[PassengerCounter].push_back(Call);
-                PData[PassengerCounter].push_back(Weight);
+            PData[PassengerCounter].push_back(Rate);
+            PData[PassengerCounter].push_back(Call);
+            PData[PassengerCounter].push_back(Weight);
 
-                /*
-                 *      {
-                 *          1: [
-                 *                  ['Visitors', '0.15'],
-                 *                  ['100', '0', '0'],
-                 *                  ['1', '1']
-                 *              ],
-                 *     .
-                 *     .
-                 *     .
-                 *     }
-                 */
+            /*
+             *      {
+             *          1: [
+             *                  ['Visitors', '0.15'],
+             *                  ['100', '0', '0'],
+             *                  ['1', '1']
+             *              ],
+             *     .
+             *     .
+             *     .
+             *     }
+             */
 
-                PassengerCounter = PassengerCounter + 1;
+            PassengerCounter = PassengerCounter + 1;
 
-           }
+        }
 
         counter = counter + 1;
     }

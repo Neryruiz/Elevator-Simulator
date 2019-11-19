@@ -55,6 +55,11 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
 
     }
 
+}
+
+void Display::displayLevelsCurrent(map<int,vector<Passenger *>> &Levels)
+{
+
     cout << "\n";
     cout << "\t\t==============================================="<< endl;
     cout << "\t\t\t\t\t" << "Floor Summary   " << endl;
@@ -73,9 +78,8 @@ void Display::introducePassenger(map<int,vector<Passenger *>> Levels)
 
     }
 
-    // For a given Batch Keeps count of Total Passengers
-}
 
+}
 
 void Display::displayTotalPassengerCount(int num)
 {
@@ -96,14 +100,13 @@ void Display::displayTotalPassengerCount(int num)
 
 
 
-void Display::displayDestinationFloors( map<int , vector<Passenger *>> LevelDest)
+void Display::displayDestinationFloors( map<int , vector<Passenger *>> &LevelDest)
 {
     cout << "\n";
     cout << "\t\t==============================================="<< endl;
     cout << "\t\t\t\t\t" << "Dest levels   " << endl;
     cout << "\t\t==============================================="<< endl;
     cout << "\n";
-
 
     // LEVEL DATA STRUCTURE
     for(int j = 0; j< LevelDest.size(); j++)
