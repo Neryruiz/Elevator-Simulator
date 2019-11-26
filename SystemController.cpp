@@ -1,7 +1,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
-
+#include "StatisticsKeeper.h"
 using  namespace std;
 
 
@@ -9,83 +9,62 @@ using  namespace std;
 #include "TrafficGenerator.h"
 #include "StringHelper.h"
 #include "Elevators.h"
-#include "Display.h"
 #include "timingWheel.h"
 #include "partitions.h"
 
 
-void SystemController::startElevator()
+void SystemController::startElevator(int simulationtime)
 {
-    Display::displayDestinationFloors(LevelDest);
 
-    //    int timeunite;
-    //    timeunite  = delay * (maxFloor + 1);
+    for(int i=1; i<=simulationtime; i++)
+    {
+        Levels = generate->generatePassengers();
 
-    //timewheel->schedule();
+    }
+
+     // LEVEL DATA STRUCTURE
+    for(int j = 0; j< Levels->size(); j++)
+    {
+        cout << "Floor : " << j << "  Passenger : " << endl;
+        for(auto x:Levels->at(j))
+        {
+            cout << " ID : " << x->PassengerId << endl;
+        }
+
+    }
+
+
+    cout << "\n";
+    cout << "\t\t==============================================="<< endl;
+    cout << "\t\t\t\t\t" << "Total Visitors  "<< StatisticsKeeper::visitorCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Patients  "<< StatisticsKeeper::patientCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Security personal  "<< StatisticsKeeper::securityStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Support Staff  "<< StatisticsKeeper::supportStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Medical Staff  "<< StatisticsKeeper::medicalStaffCounter  << endl;
+    cout << "\t\t\t\t\t" << "Total Passenger Going Up "<< StatisticsKeeper::totalPassengerGoingUp  << endl;
+    cout << "\t\t\t\t\t" << "Total Passenger Going Down "<< StatisticsKeeper::totalPassengerGoingDown  << endl;
+    cout << "\t\t==============================================="<< endl;
+    cout << "\n";
 
 
 }
 
 
-SystemController::SystemController(std::string p, int epoch, int delay):path{p},epoch{epoch}
+SystemController::SystemController(std::string p, int delay):path{p}
 {
     /*
      * Constructor
-     * Populates the Level for Specified Epoch
-     * TrafficGenerator class is called
-     * TrafficGenerator is singelton Design pattern
      */
 
-    // System Controller calls the Traffic Generator
-    TrafficGenerator *generate;
+    // TrafficGenerator *generate;
     generate = TrafficGenerator::getinstance(path);
 
-    for(int i=0; i<epoch; i++)
-    {
-        generate->generatePassengers();
-    }
-
-    Levels = generate->Levels;
-    PData= generate->PData;
-    generate->displayPassenger();
-
-    // Reverse Mapping for Destination Floor and Passengers
-    for (int i=0; i<Levels.size(); i++)
-    {
-        for(auto x: Levels[i])
-        {
-            LevelDest[x->DestinationFloor].push_back(x);
-        }
-    }
-
-    numberElevator = StringHelper::string_to_int(PData[0][0][1]);       // Number of Elevator
-    maxCapacity = StringHelper::string_to_int(PData[0][0][2]);          // max Capacity
-    maxFloor = StringHelper::string_to_int(PData[0][0][0]);             // max Floors
-
-    // Create a map of bool
-    // map<int ,bool>
-
-    for(int i=0; i<Levels.size(); i++)
-    {
-        if(Levels[i].size()>0)      // which check is there is any passenges
-        {
-            floorStatus[i]= true;
-        }
-        else
-            {
-                floorStatus[i]= false;
-            }
-    }
-
-
-    timewheel =  new timingWheel(maxFloor, delay, Levels, PData);
+    PData = generate->PData;
+    timewheel =  new timingWheel(maxFloor, delay, PData);
     delay = delay;
 
 }
 
-SystemController::~SystemController()
-{
-
-}
+SystemController::~SystemController(){}
 
 

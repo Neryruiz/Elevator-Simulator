@@ -22,8 +22,7 @@ public:
     int maxDelay;
     int numFloors;
 
-    timingWheel(int floors, int delay,
-            map<int,vector<Passenger *>> &Levels, map<int, vector<vector<std::string>>> &PData);
+    timingWheel(int floors, int delay, map<int, vector<vector<std::string>>> &PData);
 
     ~timingWheel();
     void insert(int travelFloors, Elevators* p);

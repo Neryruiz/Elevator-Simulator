@@ -16,7 +16,7 @@
 #include "RandomGenerator.h"
 #include "StringHelper.h"
 #include "GenerateUniquePassenger.h"
-#include "Display.h"
+
 #include "StatisticsKeeper.h"
 #include "Passenger.h"
 
@@ -37,7 +37,6 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
     /*
      * Constructor
      */
-
 
     FileRead *reader;
     reader = FileRead::getInstance();
@@ -61,16 +60,14 @@ TrafficGenerator::TrafficGenerator(std::string path):batchSize{0}
 
 TrafficGenerator::~TrafficGenerator(){}
 
-void TrafficGenerator::displayPassenger()
-{
-    Display::introducePassenger(Levels);
-    Display::displayLevelsCurrent(Levels);
-    Display::displayTotalPassengerCount(StatisticsKeeper::totalPassengerCreatedInBatchSize);
-}
 
-void TrafficGenerator::generatePassengers()
+
+map<int,vector<Passenger *>> * TrafficGenerator::generatePassengers()
 {
+
     batchSize = RandomGenerator::generateRandomNumber(0,StringHelper::string_to_int(PData[0][0][0]));
+    cout << "BATCH ::::  " <<batchSize << endl;
+
     if(batchSize !=0)
     {
         Passenger ** passenger;
@@ -82,15 +79,55 @@ void TrafficGenerator::generatePassengers()
             try {
                 passenger[i] = GenerateUniquePassenger::genpass(PData, PassengerSpawnRange);
                 Levels[passenger[i]->CurrentFloor].push_back(passenger[i]);             // Then Populates Levels
-                StatisticsKeeper::totalPassengerCreatedInBatchSize = StatisticsKeeper::totalPassengerCreatedInBatchSize + 1;
-
             }
             catch (int e)
             {
                 cout << "Some thing strange occured" << endl;
             }
         }
+
+        for(int j = 0; j< Levels.size(); j++)
+        {
+            for(auto x:Levels[j])
+            {
+
+                if(x->name == "SupportStaff")
+                {
+                    StatisticsKeeper::supportStaffCounter = StatisticsKeeper::supportStaffCounter + 1;
+                }
+                else if( x->name == "Visitors" )
+                {
+                    StatisticsKeeper::visitorCounter = StatisticsKeeper::visitorCounter + 1;
+                }
+                else if(x->name == "MedicalStaff")
+                {
+                    StatisticsKeeper::medicalStaffCounter = StatisticsKeeper::medicalStaffCounter + 1;
+                }
+                else if(x->name == "Patients")
+                {
+                    StatisticsKeeper::patientCounter = StatisticsKeeper::patientCounter + 1;
+                }
+                else if(x->name == "SecurityPersonnel")
+                {
+                    StatisticsKeeper::securityStaffCounter = StatisticsKeeper::securityStaffCounter + 1;
+                }
+
+                if (x->DirectionPassenger == 'U')       // Up Passengers Tracker
+                {
+                    StatisticsKeeper::totalPassengerGoingUp = StatisticsKeeper::totalPassengerGoingUp + 1;
+                }
+                else if(x->DirectionPassenger == 'D')        // Up Passengers Tracker
+                {
+                    StatisticsKeeper::totalPassengerGoingDown = StatisticsKeeper::totalPassengerGoingDown + 1;
+                }
+            }
+
+        }
+
+
     }
+
+    return &Levels;
 }
 
 vector<int> TrafficGenerator::setSpawnRange(vector<float> &Rates)

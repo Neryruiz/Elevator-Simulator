@@ -32,9 +32,8 @@ public:
      * Methods
      */
 
-    void generatePassengers();
+    map<int,vector<Passenger *>> * generatePassengers();
     vector<int> setSpawnRange(vector<float> &Rates);
-    void displayPassenger();
     static TrafficGenerator *getinstance(std::string path);
 
 

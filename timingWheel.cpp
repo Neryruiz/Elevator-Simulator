@@ -8,7 +8,7 @@
 #include <map>
 
 
-timingWheel::timingWheel(int floors, int delay, map<int,vector<Passenger *>> &Levels, map<int, vector<vector<std::string>>> &PData) {
+timingWheel::timingWheel(int floors, int delay, map<int, vector<vector<std::string>>> &PData) {
 
     //constructor
     // why +1 because
@@ -16,7 +16,7 @@ timingWheel::timingWheel(int floors, int delay, map<int,vector<Passenger *>> &Le
     // 0 to 7
     // hence + 1
 
-
+    currentSlot = 0;
     numFloors = floors + 1;
     delaySize = delay;
     maxDelay = numFloors * delay;

@@ -13,9 +13,6 @@ Elevators::Elevators():elevatorWeightCounter{0}
     string unique = uniqueId + std::to_string(count);
     ElevatorId = unique;
     count = count + 1;
-
-
-
     passengerfloorflags = new bool[higestFloor];
 
 }

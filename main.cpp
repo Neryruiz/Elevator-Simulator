@@ -1,33 +1,25 @@
 #include <iostream>
-#include <map>
-#include <vector>
-#include <deque>
-
-
-#include "Passenger.h"
 #include "Visitors.h"
-#include "Patients.h"
-#include "SupportStaff.h"
-#include "MedicalStaff.h"
-#include "SecurityPersonnel.h"
-#include "FileRead.h"
 #include "TrafficGenerator.h"
 #include "SystemController.h"
+#include <map>
+#include <vector>
 
 
-int main()
-{
+int main() {
 
 
     std::string path = "/Users/soumilshah/CLionProjects/ElevatorTestSimulation/input.txt";
-    int epoch = 1;
     int delay = 5;
-
-
+    int simulationtime = 2;
 
     SystemController *systemcontroller;
-    systemcontroller = new SystemController(path , epoch, delay);
-    systemcontroller->startElevator();
+    systemcontroller = new SystemController(path , delay);
+    systemcontroller->startElevator(simulationtime);
+
 
     return 0;
+
+
+
 }

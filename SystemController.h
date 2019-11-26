@@ -11,7 +11,7 @@ using namespace std;
 #include "Passenger.h"
 #include "timingWheel.h"
 #include "partitions.h"
-
+#include "TrafficGenerator.h"
 
 class SystemController {
 
@@ -19,15 +19,15 @@ public:
     /*
      * Constructor and Destructor
      */
-    SystemController(std::string path, int epoch, int delay);      // Populate Traffic in Const
-    ~SystemController();                                // Dest
+    SystemController(std::string path, int delay);      // Populate Traffic in Const
+    ~SystemController();                                            // Dest
 
 public:
     /*
      * Methods
      */
 
-    void startElevator();                   // Creates Elevator object and Starts Lift etc
+    void startElevator(int simulationtime);                   // Creates Elevator object and Starts Lift etc
 
 
 public:
@@ -36,7 +36,7 @@ public:
      */
 
     map<int, vector<vector<std::string>>> PData;        // PData DataStructure
-    map<int,vector<Passenger *>> Levels;                // Current Floow Data Structrue
+    map<int,vector<Passenger *>> *Levels;
     map<int , vector<Passenger *>> LevelDest;           // Dest Floor Data Structure
     map<int, bool> floorStatus;                         // Its Flag whether person is there on that FLoor or not
 
@@ -47,6 +47,7 @@ public:
     int maxFloor;                                       // Max Floors
     timingWheel *timewheel;                             // timing wheel partition
     int delay;
+    TrafficGenerator *generate;
 
 };
 
