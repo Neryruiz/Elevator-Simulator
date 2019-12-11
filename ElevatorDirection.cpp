@@ -16,16 +16,42 @@ char ElevatorDirection::checkDirection(string currentFloors, string DestinationF
     if (CurrentFloor < DestinationFloor)
     {
         return 'U';
-    }
-
-    if (CurrentFloor > DestinationFloor)
+	}
+	else if (CurrentFloor > DestinationFloor)
     {
         return 'D';
     }
-
-    if(CurrentFloor == DestinationFloor)
+	else if(CurrentFloor == DestinationFloor)
     {
         return 'N';
-    }
+	}
+	else {
+		return 'N';
+	}
+
+}
+
+char ElevatorDirection::checkDirection(int currentFloor, int DestinationFloor)
+{
+
+	// True mean Go Up
+	//int CurrentFloor = StringHelper::string_to_int(currentFloors);
+	//int DestinationFloor = StringHelper::string_to_int(DestinationFloors);
+
+	if (currentFloor < DestinationFloor)
+	{
+		return 'U';
+	}
+	else if (currentFloor > DestinationFloor)
+	{
+		return 'D';
+	}
+	else if (currentFloor == DestinationFloor)
+	{
+		return 'N';
+	}
+	else {
+		return 'N';
+	}
 
 }

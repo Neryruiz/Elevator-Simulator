@@ -13,6 +13,7 @@ public:
     // D mean opp
     // N same
     static char checkDirection(string currentFloor, string DestinationFloor);
+	static char checkDirection(int currentFloor, int DestinationFloor);
 
 };
 

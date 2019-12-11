@@ -8,21 +8,25 @@
 
 #include "Elevators.h"
 #include "ElevatorDirection.h"
+#include "Passenger.h"
 //#include "partition.h"
 #include <iostream>
+#include <map>
 #include <vector>
 
 using namespace std;
 
 class partitions {
 public:
-    Elevators* elevator;
+    Elevators* elevator = nullptr;
     partitions* next = nullptr;
+	char callRespondType = 'N'; //type of call the elevator is responding to
+	char directionRequest = 'N';//tyoe passegner request
 
 public:
-    partitions(Elevators* e, partitions* n = nullptr);
+    partitions(Elevators* e, partitions* n = nullptr, char callType = 'R', char directionCall = 'N');
     ~partitions();
-    void elevatorTask();
+    map<int, vector<Passenger*>> *elevatorTask(map<int, vector<Passenger *>> * Levels);
     void setNextPartition(partitions* n);
     partitions* getNextPartitions();
 };

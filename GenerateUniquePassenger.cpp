@@ -25,7 +25,7 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
     int floor = StringHelper::string_to_int( PData[0][0][0]);
 
     // Give 1 - 5
-    int PassengerIndex = RandomGenerator::generateRandomNumber(0, PassengerSpawnRange.size());
+    int PassengerIndex = RandomGenerator::generateRandomNumber(0, PassengerSpawnRange.size()-1);
 
     Passenger *p;
 
@@ -119,7 +119,7 @@ Passenger * GenerateUniquePassenger::genpass(map<int, vector<vector<std::string>
 
     tm->DirectionPassenger = ElevatorDirection::checkDirection(currentfloor,destinationFloor);
     tm->callType = RandomGenerator::generatCall(PData[tmpType][1]);
-
+	
     return tm;
 
 
